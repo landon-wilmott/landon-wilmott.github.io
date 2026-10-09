@@ -13,17 +13,18 @@
       <link>http://localhost:1313/posts/introduction/</link>
       <pubDate>Thu, 08 Oct 2026 19:23:01 -0600</pubDate>
       <guid>http://localhost:1313/posts/introduction/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;landon-wilmott&#34;&gt;Landon Wilmott&lt;/h2&gt;
+&lt;p&gt;I am a Computer Engineering student at Brigham Young University with a minor in Cybersecurity. Alongside my studies, I supervise student employees in IT support and computer lab maintenance, and I hold CompTIA A+, Network+, and Security+ certifications. I am actively pursuing Security Infrastructure Engineer and data center roles where I can apply my background in hardware maintenance, network virtualization, and systems administration.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>EC EN 340 Artifact 2: SPICE Circuit Simulation</title>
+      <title>Light Following Robot Filter</title>
       <link>http://localhost:1313/posts/second-artifact/</link>
       <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/second-artifact/</guid>
       <description>&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
-&lt;p&gt;For this EC EN 340 lab, the objective was to analyze an NGspice netlist and simulate circuit behavior. We were provided with starter code and strictly required to maintain the original V1, I1, and R1 components and their interconnections.&lt;/p&gt;
+&lt;p&gt;The objective of this circuit was to process the signal for a light-following robot. Specifically, the system needed a reliable way to filter out ambient room lighting interference so the robot could accurately track its target light source.&lt;/p&gt;
 &lt;h2 id=&#34;my-contribution&#34;&gt;My Contribution&lt;/h2&gt;
-&lt;p&gt;I designed the node layout and configured the netlist to accurately reflect the required voltages. To achieve the necessary $v_p = 1.65V$ and $v_n = -1.65V$, I strategically placed the ground between R2 and R3. I also ensured that C6 and C7 were correctly routed without grounding them, avoiding a common schematic error.&lt;/p&gt;</description>
+&lt;p&gt;I designed a circuit that allows the rails of the op-amp to rest at 9V and 0V while biasing the positive input to 4.5V. Establishing this virtual ground made it possible to correctly filter the signal using a single voltage source.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpAmp Noise Filter</title>
@@ -31,9 +32,9 @@
       <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/spice-simulation-lab/</guid>
       <description>&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
-&lt;p&gt;This project involved using a maximum of 2 opamps to filter out the noise coming from different sources including 2 photodiodes and 100Hz and 20kHz respectively, and a 1481Hz power source. This while ensure the frequencies of 1250Hz to 3666Hz make it through.&lt;/p&gt;
-&lt;h2 id=&#34;procedure&#34;&gt;Procedure&lt;/h2&gt;
-&lt;p&gt;I designed a circuit using two opamps, with multiple filters with 1000Hz for the lower corners frequency and 10kHz for the upper corner frequency. The corner frequencies were chosen because we needed frequencies of 1250Hz to 3666Hz to get through the filters while filtering out everything else.&lt;/p&gt;</description>
+&lt;p&gt;This project involved using a maximum of two op-amps to filter out noise coming from different sources, including two photodiodes at 100Hz and 20kHz, and a 1481Hz power source. This design ensures that only the target frequencies of 1250Hz to 3666Hz make it through the circuit.&lt;/p&gt;
+&lt;h2 id=&#34;my-contribution&#34;&gt;My Contribution&lt;/h2&gt;
+&lt;p&gt;I designed a circuit using two op-amps with multiple filters, setting the lower corner frequency to 1000Hz and the upper corner frequency to 10kHz. These corner frequencies were specifically chosen to create a bandpass window that allows the 1250Hz–3666Hz range to pass while severely attenuating all other environmental noise.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
