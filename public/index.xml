@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>My New Hugo Project</title>
+    <title>Landon Wilmott - Computer Engineer</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Project</description>
+    <description>Recent content on Landon Wilmott - Computer Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Oct 2026 19:23:01 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Introduction</title>
-      <link>http://localhost:1313/posts/introduction/</link>
-      <pubDate>Thu, 08 Oct 2026 19:23:01 -0600</pubDate>
-      <guid>http://localhost:1313/posts/introduction/</guid>
-      <description>&lt;h2 id=&#34;landon-wilmott&#34;&gt;Landon Wilmott&lt;/h2&gt;
-&lt;p&gt;I am a Computer Engineering student at Brigham Young University with a minor in Cybersecurity. Alongside my studies, I supervise student employees in IT support and computer lab maintenance, and I hold CompTIA A+, Network+, and Security+ certifications. I am actively pursuing Security Infrastructure Engineer and data center roles where I can apply my background in hardware maintenance, network virtualization, and systems administration.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Light Following Robot Filter</title>
       <link>http://localhost:1313/posts/second-artifact/</link>
