@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on My New Hugo Project</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Oct 2026 19:23:01 -0600</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>http://localhost:1313/posts/introduction/</link>
+      <pubDate>Thu, 08 Oct 2026 19:23:01 -0600</pubDate>
+      <guid>http://localhost:1313/posts/introduction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>EC EN 340 Artifact 2: SPICE Circuit Simulation</title>
+      <link>http://localhost:1313/posts/second-artifact/</link>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/second-artifact/</guid>
+      <description>&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
+&lt;p&gt;For this EC EN 340 lab, the objective was to analyze an NGspice netlist and simulate circuit behavior. We were provided with starter code and strictly required to maintain the original V1, I1, and R1 components and their interconnections.&lt;/p&gt;
+&lt;h2 id=&#34;my-contribution&#34;&gt;My Contribution&lt;/h2&gt;
+&lt;p&gt;I designed the node layout and configured the netlist to accurately reflect the required voltages. To achieve the necessary $v_p = 1.65V$ and $v_n = -1.65V$, I strategically placed the ground between R2 and R3. I also ensured that C6 and C7 were correctly routed without grounding them, avoiding a common schematic error.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpAmp Noise Filter</title>
+      <link>http://localhost:1313/posts/spice-simulation-lab/</link>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/spice-simulation-lab/</guid>
+      <description>&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
+&lt;p&gt;This project involved using a maximum of 2 opamps to filter out the noise coming from different sources including 2 photodiodes and 100Hz and 20kHz respectively, and a 1481Hz power source. This while ensure the frequencies of 1250Hz to 3666Hz make it through.&lt;/p&gt;
+&lt;h2 id=&#34;procedure&#34;&gt;Procedure&lt;/h2&gt;
+&lt;p&gt;I designed a circuit using two opamps, with multiple filters with 1000Hz for the lower corners frequency and 10kHz for the upper corner frequency. The corner frequencies were chosen because we needed frequencies of 1250Hz to 3666Hz to get through the filters while filtering out everything else.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
