@@ -2,3 +2,6 @@ baseURL = 'https://example.org/'
 locale = 'en-us'
 title = 'My New Hugo Project'
 theme = "PaperMod"
+[params.homeInfoParams]
+    Title = "Landon Wilmott"
+    Content = "I am a Computer Engineering student at Brigham Young University with a minor in Cybersecurity. Alongside my studies, I supervise student employees in IT support and computer lab maintenance, and I hold CompTIA A+, Network+, and Security+ certifications. I am actively pursuing Security Infrastructure Engineer and data center roles where I can apply my background in hardware maintenance, network virtualization, and systems administration."
