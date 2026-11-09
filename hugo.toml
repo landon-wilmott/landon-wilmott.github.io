@@ -1,7 +1,324 @@
 baseURL = "https://landon-wilmott.github.io/"
-locale = 'en-us'
-title = 'Landon Wilmott - Computer Engineer'
-theme = "PaperMod"
-[params.homeInfoParams]
-    Title = "Landon Wilmott"
-    Content = "I am a Computer Engineering student at Brigham Young University with a minor in Cybersecurity. Alongside my studies, I supervise student employees in IT support and computer lab maintenance, and I hold CompTIA A+, Network+, and Security+ certifications. I am actively pursuing Security Infrastructure Engineer and data center roles where I can apply my background in hardware maintenance, network virtualization, and systems administration."
+locale = "en-us"
+title = "Landon Wilmott | Computer Engineering & EC EN 340 Portfolio"
+theme = "hugo-profile"
+enableRobotsTXT = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "RSS"]
+
+[pagination]
+  pagerSize = 6
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+
+[[Menus.main]]
+  identifier = "toc"
+  name = "TOC"
+  title = "Portfolio Table of Contents"
+  url = "/#toc"
+  weight = 1
+
+[[Menus.main]]
+  identifier = "artifacts-dropdown"
+  name = "EC EN 340 Artifacts"
+  title = "Selected EC EN 340 Artifacts"
+  weight = 2
+
+[[Menus.main]]
+  identifier = "artifacts-home"
+  name = "All 4 Artifacts (Overview)"
+  title = "All 4 Artifacts on Homepage"
+  url = "/#projects"
+  parent = "artifacts-dropdown"
+  weight = 1
+
+[[Menus.main]]
+  identifier = "artifact-1"
+  name = "1. Power Rail Splitter & Ripple Filter"
+  title = "Artifact 1: Power Supply Rail Splitter"
+  url = "/posts/artifact-1-rail-splitter/"
+  parent = "artifacts-dropdown"
+  weight = 2
+
+[[Menus.main]]
+  identifier = "artifact-2"
+  name = "2. Dual Op-Amp Bandpass Filter"
+  title = "Artifact 2: Dual Op-Amp Bandpass Filter"
+  url = "/posts/spice-simulation-lab/"
+  parent = "artifacts-dropdown"
+  weight = 3
+
+[[Menus.main]]
+  identifier = "artifact-3"
+  name = "3. Light-Following Robot Filter"
+  title = "Artifact 3: Single-Supply Robot Filter"
+  url = "/posts/second-artifact/"
+  parent = "artifacts-dropdown"
+  weight = 4
+
+[[Menus.main]]
+  identifier = "artifact-4"
+  name = "4. Netlist Verification & Revision"
+  title = "Artifact 4: NGspice Netlist Verification"
+  url = "/posts/artifact-4-netlist-verification/"
+  parent = "artifacts-dropdown"
+  weight = 5
+
+[[Menus.main]]
+  identifier = "design-journey"
+  name = "Revision & Journey"
+  title = "Evidence of Revision & Design Journey"
+  url = "/#design-journey"
+  weight = 3
+
+[[Menus.main]]
+  identifier = "byu-aims"
+  name = "BYU Aims"
+  title = "Connection to BYU Aims"
+  url = "/#byu-aims"
+  weight = 4
+
+[[Menus.main]]
+  identifier = "master-portfolio"
+  name = "Full Portfolio & TOC"
+  title = "Master Portfolio Page with Sidebar TOC"
+  url = "/portfolio-overview/"
+  weight = 5
+
+[params]
+  title = "Landon Wilmott"
+  description = "Computer Engineering & Cybersecurity Portfolio for Landon Wilmott at Brigham Young University, featuring EC EN 340 circuit design artifacts, design journey reflections, and BYU Aims alignment."
+  favicon = "/fav.png"
+  useBootstrapCDN = false
+  mathjax = true
+  animate = true
+
+  [params.font]
+    fontSize = "1rem"
+    fontWeight = 400
+    lineHeight = 1.6
+    textAlign = "left"
+
+  [params.navbar]
+    align = "ms-auto"
+    brandName = "Landon Wilmott"
+    disableSearch = false
+    searchPlaceholder = "Search portfolio..."
+    enableSeparator = true
+    [params.navbar.stickyNavBar]
+      enable = true
+      showOnScrollUp = false
+    [params.navbar.menus]
+      disableAbout = false
+      disableExperience = false
+      disableEducation = false
+      disableProjects = true
+      disableAchievements = true
+      disableContact = false
+
+  [params.hero]
+    enable = true
+    intro = "Brigham Young University • Computer Engineering & Cybersecurity"
+    title = "Landon Wilmott"
+    subtitle = "Target Role: Security Infrastructure & Data Center Engineer"
+    content = "I am a Computer Engineering student at Brigham Young University with a minor in Cybersecurity. Alongside my studies, I supervise student employees in IT support and computer lab maintenance, and I hold CompTIA A+, Network+, and Security+ certifications. I am actively pursuing Security Infrastructure Engineer and data center roles where I can apply my background in hardware maintenance, analog/digital circuit diagnostics, network virtualization, and systems administration."
+    image = "/images/circuit_hero.svg"
+    [params.hero.bottomImage]
+      enable = true
+    [params.hero.button]
+      enable = true
+      name = "Open Complete Portfolio & TOC"
+      url = "/portfolio-overview/"
+      download = false
+      newPage = false
+    [[params.hero.socialLinks.fontAwesomeIcons]]
+      icon = "fab fa-github"
+      url = "https://github.com/landon-wilmott"
+    [[params.hero.socialLinks.fontAwesomeIcons]]
+      icon = "fas fa-university"
+      url = "https://aims.byu.edu/"
+    [[params.hero.socialLinks.fontAwesomeIcons]]
+      icon = "fas fa-envelope"
+      url = "mailto:law2003@byu.edu"
+
+  [params.about]
+    enable = true
+    title = "Professional Introduction & Target Role"
+    targetRole = "Security Infrastructure Engineer / Data Center Hardware & Systems Engineer"
+    image = "/images/profile_badge.svg"
+    content = """
+I bridge the gap between **physical-layer hardware engineering** and **enterprise cybersecurity infrastructure**. Through my Computer Engineering coursework at BYU (including **EC EN 340: Electronic Circuit Design**) and my leadership role supervising IT support and computer lab maintenance, I have developed a rigorous, systems-level approach to troubleshooting—from microvolt-level analog signal integrity and SPICE simulation up to enterprise network virtualization and security hardening.
+
+This revised portfolio presents **four selected EC EN 340 engineering artifacts**, documented **evidence of revision based on feedback**, my **semester Design Journey reflection**, and a direct connection between my engineering practice and the **[Aims of a BYU Education](https://aims.byu.edu/)**.
+"""
+    [params.about.skills]
+      enable = true
+      title = "Core Technical Competencies & Industry Certifications:"
+      items = [
+        "**CompTIA Security+, Network+ & A+** Certified",
+        "**NGspice & Circuit Simulation** (AC/Transient/DC Bias)",
+        "**Active & Passive Filter Design** (Cascaded Op-Amps)",
+        "**Single-Supply Analog Interfacing** (Virtual Grounds)",
+        "**Network Virtualization & Systems Administration**",
+        "**Data Center Hardware Maintenance & Diagnostics**",
+        "**IT Team Supervision & Technical Operations**",
+        "**Root-Cause Hardware & Netlist Debugging**"
+      ]
+
+  [params.projects]
+    enable = true
+    title = "Selected EC EN 340 Artifacts (4 Artifacts)"
+    subtitle = "Each selected artifact below includes a structured explanation of **The Problem**, **My Contribution**, **The Result**, and **What the Artifact Demonstrates**, along with schematic visuals and links to the full technical write-ups."
+
+    [[params.projects.items]]
+      title = "Artifact 1: Power Supply Rail Splitter & 3-Stage Ripple Decoupling Network"
+      image = "/images/artifact1_rail_splitter.png"
+      badges = ["EC EN 340", "Power Integrity", "Virtual Ground", "NGspice"]
+      content = """
+* **The Problem:** Our optical receiver was powered by a single $3.3\\text{V}$ DC source (`V1`) contaminated with a $30\\text{mV}$ ($1481\\text{Hz}$) AC ripple—directly inside our $1250\\text{Hz}\\text{–}3666\\text{Hz}$ passband—while the op-amps required clean, symmetric $+1.65\\text{V}$ (`vp`) and $-1.65\\text{V}$ (`vn`) dual rails.
+* **My Contribution:** Designed a 3-stage cascaded RC low-pass decoupling filter ($R = 10\\ \\Omega, C = 159\\ \\mu\\text{F}, f_c \\approx 100\\text{Hz}$) feeding a matched $100\\text{k}\\Omega$ voltage divider (`R2`/`R3`). Strategically placed the reference ground (`0V`) between `R2` and `R3` with parallel $1\\text{mF}$ bulk and $1\\ \\mu\\text{F}$ bypass capacitors.
+* **The Result:** Generated rock-solid **$v_p = +1.65\\text{V}$** and **$v_n = -1.65\\text{V}$** rails while heavily attenuating the $1481\\text{Hz}$ supply ripple before it could modulate the high-gain amplifier stages.
+* **What This Demonstrates:** Power integrity engineering, virtual ground synthesis, multi-decade capacitor bypassing, and constraint-driven SPICE modeling.
+"""
+      [params.projects.items.featured]
+        name = "Read Full Artifact 1 →"
+        link = "/posts/artifact-1-rail-splitter/"
+
+    [[params.projects.items]]
+      title = "Artifact 2: Dual Op-Amp Cascaded Bandpass Noise Filter (1.25–3.67 kHz)"
+      image = "/images/artifact2_bandpass_chain.png"
+      badges = ["EC EN 340", "Active Bandpass", "120 dB Gain", "Bode Design"]
+      content = """
+* **The Problem:** Using at most two op-amps, isolate a tiny $1\\text{pA}$ ($2000\\text{Hz}$) photodiode signal (`Is`) buried under a $1\\text{mA}$ DC offset (`In1`), two $400\\text{nA}$ noise sources at $100\\text{Hz}$ (`In2`) and $20\\text{kHz}$ (`In3`), and a $1481\\text{Hz}$ power ripple so only the **$1250\\text{Hz}\\text{–}3666\\text{Hz}$** band passes.
+* **My Contribution:** Architected a hybrid filter chain with lower corner $f_L = 1000\\text{Hz}$ and upper corner $f_H = 10\\text{kHz}$: a 3-stage passive RC high-pass input filter ($15\\text{nF}/10.6\\text{k}\\Omega$), two cascaded inverting bandpass op-amps ($R_{in}=1\\text{k}\\Omega, C_{in}=159\\text{nF}, R_f=1\\text{M}\\Omega, C_f=15.9\\text{pF}$, yielding $60\\text{dB}$ gain/stage), and a 3-stage passive RC low-pass output filter ($1.6\\text{k}\\Omega/10\\text{nF}$).
+* **The Result:** Achieved **$120\\text{dB}$ ($10^6\\text{ V/V}$) passband amplification** across $1250\\text{Hz}\\text{–}3666\\text{Hz}$ while sharply attenuating DC, $100\\text{Hz}$, and $20\\text{kHz}$ noise without rail saturation.
+* **What This Demonstrates:** Multi-pole filter synthesis, corner-frequency calculation, high-gain cascaded amplifier staging, and SNR optimization.
+"""
+      [params.projects.items.featured]
+        name = "Read Full Artifact 2 →"
+        link = "/posts/spice-simulation-lab/"
+
+    [[params.projects.items]]
+      title = "Artifact 3: Single-Supply Light-Following Robot Filter & Virtual Ground Biasing"
+      image = "/images/NGspice_project_2.png"
+      badges = ["EC EN 340", "Single-Supply 9V", "Robotics Sensor", "AC Coupling"]
+      content = """
+* **The Problem:** Process a $1\\text{kHz}$ pulsed optical beacon (`I1 = 0.1 mA`) for a light-following robot operating from a single $9\\text{V}$ battery (`V1`) and $0\\text{V}$ ground, while filtering out ambient room lighting that would otherwise clip the signal against the $0\\text{V}$ rail.
+* **My Contribution:** Designed an AC-coupled inverting amplifier ($R_4 = 10\\text{M}\\Omega, R_5 = 50\\text{M}\\Omega, |A_v| = 5\\text{ V/V}$) with op-amp rails at $9\\text{V}$ and $0\\text{V}$, using a matched $100\\text{k}\\Omega$ divider (`R7`/`R8`) to bias the non-inverting input (`+`) to a $+4.5\\text{V}$ virtual ground, paired with input ($C_1 = 1\\ \\mu\\text{F}$) and output ($C_2 = 1\\ \\mu\\text{F}, R_9 = 1\\text{M}\\Omega$) DC-blocking stages.
+* **The Result:** Enabled full symmetric AC swing centered at $+4.5\\text{V}$ inside the op-amp without clipping, and restored a clean $0\\text{V}$-centered output waveform (`out`) immune to ambient room light.
+* **What This Demonstrates:** Single-supply op-amp biasing, DC blocking / AC restoration, and practical embedded sensor conditioning.
+"""
+      [params.projects.items.featured]
+        name = "Read Full Artifact 3 →"
+        link = "/posts/second-artifact/"
+
+    [[params.projects.items]]
+      title = "Artifact 4: NGspice Netlist Verification, Capacitor Routing Audit & Revision"
+      image = "/images/NGspice_M1_screenshot.png"
+      badges = ["EC EN 340", "SPICE Netlist", "Debugging & Audit", "Iterative Revision"]
+      content = """
+* **The Problem:** Early iterations of the optical receiver netlist suffered from signal loss and insufficient out-of-band roll-off due to mis-grounded coupling capacitors (`C6`/`C7`, `C23`/`C24`) and strict requirements to preserve starter components (`V1`, `I1`, `R1`) unchanged.
+* **My Contribution:** Conducted a node-by-node netlist audit to route all coupling capacitors strictly in series without grounding them, verified shunt bypass capacitor terminations at node `0`, preserved starter `V1`/`I1`/`R1` interconnections, and upgraded single-pole filters into 3-stage RC cascades based on feedback.
+* **The Result:** Eliminated schematic-to-netlist discrepancies, achieved steep 4th-order roll-off outside the $1\\text{kHz}\\text{–}10\\text{kHz}$ window, and passed 100% of Milestone 1 simulation checks.
+* **What This Demonstrates:** Systematic root-cause debugging, SPICE netlist fluency, strict interface compliance, and feedback-driven engineering iteration.
+"""
+      [params.projects.items.featured]
+        name = "Read Full Artifact 4 →"
+        link = "/posts/artifact-4-netlist-verification/"
+
+  [params.experience]
+    enable = true
+    title = "Professional & Technical Experience"
+    [[params.experience.items]]
+      company = "BYU IT & Lab Operations"
+      companyUrl = "https://www.byu.edu"
+      [[params.experience.items.jobs]]
+        name = "IT Support & Computer Lab Maintenance Supervisor"
+        date = "Present"
+        info = { content = "Supervising student technicians in hardware maintenance, systems administration, and IT support" }
+        content = """
+Supervise and mentor student employees responsible for enterprise IT support, workstation provisioning, and hardware/network maintenance across university computer labs.
+
+- **Hardware & Infrastructure Maintenance:** Lead physical hardware diagnostics, component-level troubleshooting, imaging, and preventative maintenance across high-availability lab environments.
+- **Systems & Network Administration:** Apply CompTIA **A+**, **Network+**, and **Security+** principles to maintain secure network connectivity, virtualized systems, and endpoint reliability.
+- **Operational Leadership:** Train student technicians on standardized diagnostic workflows, ticket escalation, and quality assurance.
+"""
+    [[params.experience.items]]
+      company = "BYU EC EN 340"
+      companyUrl = "https://ece.byu.edu"
+      [[params.experience.items.jobs]]
+        name = "Electronic Circuit Design & Simulation (Student Engineer)"
+        date = "Fall 2026"
+        info = { content = "Analog circuit design, active filtering, SPICE verification, and hardware prototyping" }
+        content = """
+Designed, simulated, and iteratively refined multi-stage analog signal-conditioning circuits in **NGspice** and physical lab hardware.
+
+- **Multi-Stage Active Filter Architecture:** Engineered dual-op-amp cascaded bandpass filters ($120\\text{dB}$ gain) and 3-stage passive RC networks to isolate picowatt/nanoamp optical signals from heavy out-of-band interference.
+- **Single-Supply & Power Integrity Design:** Synthesized mid-rail virtual grounds ($+4.5\\text{V}$ and $\\pm 1.65\\text{V}$) and multi-stage power-supply ripple decoupling filters for autonomous robotics sensors.
+- **Simulation-First Verification:** Audited SPICE netlists and frequency-domain Bode responses to eliminate node-grounding bugs before hardware build.
+"""
+
+  [params.education]
+    enable = true
+    title = "Education & Industry Certifications"
+    index = true
+    [[params.education.items]]
+      title = "B.S. in Computer Engineering (Minor in Cybersecurity)"
+      date = "In Progress"
+      content = """
+**Relevant Coursework & Focus Areas:**
+- **EC EN 340 (Electronic Circuit Design 1):** Op-Amp Active Filters, Virtual Ground Biasing, Power Decoupling, Diode/Transistor Circuits, and NGspice Simulation.
+- **Cybersecurity & Infrastructure:** Network Virtualization, Systems Administration, Hardware Security, and Enterprise Infrastructure Hardening.
+- **BYU Aims Integration:** Applying *Intellectually Enlarging* theory to hands-on hardware and security engineering in alignment with the [Aims of a BYU Education](https://aims.byu.edu/).
+"""
+      [params.education.items.school]
+        name = "Brigham Young University (Provo, UT)"
+        url = "https://www.byu.edu"
+      [params.education.items.featuredLink]
+        enable = true
+        name = "View EC EN 340 Portfolio Overview"
+        url = "/portfolio-overview/"
+
+    [[params.education.items]]
+      title = "CompTIA Security+, Network+, and A+ Certifications"
+      date = "Certified"
+      content = """
+Hold the full **CompTIA Secure Infrastructure Specialist** triad, validating end-to-end readiness for **Security Infrastructure Engineer** and **Data Center Engineer** roles:
+- **CompTIA Security+:** Threat mitigation, zero-trust architecture, cryptographic protocols, and secure systems administration.
+- **CompTIA Network+:** Network topology, routing/switching, VLAN segmentation, network virtualization, and packet-level troubleshooting.
+- **CompTIA A+:** Enterprise hardware maintenance, server/workstation diagnostics, operating systems, and IT operational support.
+"""
+      [params.education.items.school]
+        name = "CompTIA Certified Professional"
+        url = "https://www.comptia.org"
+      [params.education.items.featuredLink]
+        enable = false
+
+  [params.achievements]
+    enable = false
+
+  [params.contact]
+    enable = true
+    title = "Contact & Connect"
+    content = "I am actively seeking Security Infrastructure Engineer, Data Center Hardware Engineer, and Systems Engineering opportunities. Feel free to reach out to discuss my EC EN 340 circuit designs, cybersecurity background, or open engineering roles."
+    btnName = "Email Landon Wilmott"
+    btnLink = "mailto:law2003@byu.edu"
+
+  [params.footer]
+    [params.footer.recentPosts]
+      path = "posts"
+      count = 4
+      title = "EC EN 340 Artifacts"
+      enable = true
+      disableFeaturedImage = false
+    [params.footer.socialNetworks]
+      github = "https://github.com/landon-wilmott"

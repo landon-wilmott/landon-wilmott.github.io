@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Single-Supply Op-Amp on Landon Wilmott | Computer Engineering &amp; EC EN 340 Portfolio</title>
+		<link>http://localhost:1313/tags/single-supply-op-amp/</link>
+		<description>Recent content in Single-Supply Op-Amp on Landon Wilmott | Computer Engineering &amp; EC EN 340 Portfolio</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 08 Oct 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/single-supply-op-amp/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Artifact 3: Single-Supply Light-Following Robot Filter &amp; Virtual Ground Biasing</title>
+				<link>http://localhost:1313/posts/second-artifact/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/second-artifact/</guid>
+				<description>&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;&#xA;&lt;p&gt;The objective of this &lt;strong&gt;EC EN 340&lt;/strong&gt; circuit was to condition the optical sensor signal for an autonomous light-following robot. In a mobile robotics platform, only a single $9\text{V}$ battery (&lt;code&gt;V1 = 9V&lt;/code&gt;) and $0\text{V}$ ground are available—there is no negative voltage supply rail. Furthermore, static ambient room lighting creates a large DC photodiode offset, while the robot needs to track a modulated $1\text{kHz}$ target light beacon (&lt;code&gt;I1 = 0.1 mA&lt;/code&gt;). Without proper DC blocking and mid-rail biasing, the negative half-cycle of the AC signal immediately clips against the $0\text{V}$ ground rail.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

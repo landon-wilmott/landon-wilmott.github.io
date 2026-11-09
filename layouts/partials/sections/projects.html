@@ -1,0 +1,58 @@
+{{ if .Site.Params.projects.enable | default false }}
+{{- $projects := .Site.Language.Params.projects | default .Site.Params.projects -}}
+<section id="projects" class="py-5">
+    <div class="container">
+        <div class="text-center mb-2">
+            <span class="rubric-tag">EC EN 340 Engineering Portfolio</span>
+        </div>
+        <h3 class="text-center">{{ $projects.title | default .Site.Params.projects.title | default (i18n "projects") }}</h3>
+        {{ if $projects.subtitle }}
+        <p class="text-center secondary-font mx-auto mb-4" style="max-width: 780px;">
+            {{ $projects.subtitle | markdownify }}
+        </p>
+        {{ end }}
+        <div class="row justify-content-center px-2 px-md-4">
+            {{ range $projects.items | default .Site.Params.projects.items }}
+            <div class="col-lg-6 col-md-6 my-3">
+                <div class="card my-3 h-100 d-flex flex-column" title="{{ .title }}">
+                    {{ if .image }}
+                    <div class="card-head">
+                        <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}">
+                    </div>
+                    {{ end }}
+                    <div class="card-body bg-transparent p-4 flex-grow-1">
+                        <div class="pb-2 bg-transparent">
+                            {{ range .badges }}
+                            <span class="badge badge-secondary">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                        <h4 class="card-title bg-transparent mt-2 mb-3">{{ .title }}</h4>
+                        <div class="card-text bg-transparent secondary-font">
+                            {{ .content | markdownify }}
+                        </div>
+                    </div>
+                    {{ if or (.links) (.featured) }}
+                    <div class="card-footer py-3 px-4 bg-transparent">
+                        {{ range .links }}
+                        <span class="m-1 mx-2">
+                            <a href="{{ .url }}">
+                                <i class="{{ .icon }}"></i>
+                            </a>
+                        </span>
+                        {{ end }}
+                        {{ if .featured }}
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="{{ .featured.link }}">
+                                {{ .featured.name }}
+                            </a>
+                        </span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

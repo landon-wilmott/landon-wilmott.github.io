@@ -1,11 +1,136 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Tags on Landon Wilmott - Computer Engineer</title>
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on Landon Wilmott - Computer Engineer</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Tags on Landon Wilmott | Computer Engineering &amp; EC EN 340 Portfolio</title>
+		<link>http://localhost:1313/tags/</link>
+		<description>Recent content in Tags on Landon Wilmott | Computer Engineering &amp; EC EN 340 Portfolio</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>BYU Aims</title>
+				<link>http://localhost:1313/tags/byu-aims/</link>
+				<pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/byu-aims/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Computer Engineering</title>
+				<link>http://localhost:1313/tags/computer-engineering/</link>
+				<pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/computer-engineering/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cybersecurity</title>
+				<link>http://localhost:1313/tags/cybersecurity/</link>
+				<pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/cybersecurity/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>EC en 340</title>
+				<link>http://localhost:1313/tags/ec-en-340/</link>
+				<pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/ec-en-340/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Portfolio</title>
+				<link>http://localhost:1313/tags/portfolio/</link>
+				<pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/portfolio/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Active Filters</title>
+				<link>http://localhost:1313/tags/active-filters/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/active-filters/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Analog Interfacing</title>
+				<link>http://localhost:1313/tags/analog-interfacing/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/analog-interfacing/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Design Revision</title>
+				<link>http://localhost:1313/tags/design-revision/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/design-revision/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Light-Following Robot</title>
+				<link>http://localhost:1313/tags/light-following-robot/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/light-following-robot/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>NGspice</title>
+				<link>http://localhost:1313/tags/ngspice/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/ngspice/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Op-Amp Design</title>
+				<link>http://localhost:1313/tags/op-amp-design/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/op-amp-design/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Power Integrity</title>
+				<link>http://localhost:1313/tags/power-integrity/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/power-integrity/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Signal Processing</title>
+				<link>http://localhost:1313/tags/signal-processing/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/signal-processing/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Single-Supply Op-Amp</title>
+				<link>http://localhost:1313/tags/single-supply-op-amp/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/single-supply-op-amp/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>SPICE Netlist</title>
+				<link>http://localhost:1313/tags/spice-netlist/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/spice-netlist/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Verification &amp; Debugging</title>
+				<link>http://localhost:1313/tags/verification--debugging/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/verification--debugging/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Virtual Ground</title>
+				<link>http://localhost:1313/tags/virtual-ground/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/virtual-ground/</guid>
+				<description></description>
+			</item>
+	</channel>
 </rss>

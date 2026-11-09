@@ -1,0 +1,91 @@
+<section id="design-journey" class="py-5">
+  <div class="container">
+    <div class="text-center mb-2">
+      <span class="rubric-tag">Reflection, Iteration &amp; BYU Mission Alignment</span>
+    </div>
+    <h3 class="text-center mb-4">Evidence of Revision, Design Journey &amp; BYU Aims</h3>
+
+    <div class="row g-4 px-2 px-md-4">
+      <!-- Evidence of Revision Based on Feedback -->
+      <div class="col-lg-6">
+        <div class="journey-card h-100 p-4">
+          <span class="rubric-tag">Iterative Improvement</span>
+          <h4 class="mb-3"><i class="fas fa-sync-alt me-2"></i>Evidence of Revision Based on Feedback</h4>
+          <p class="secondary-font">
+            Both my circuit designs and this engineering portfolio underwent structured revisions following instructor, TA, and peer feedback:
+          </p>
+          <ul class="secondary-font ps-3">
+            <li class="mb-2">
+              <strong>Portfolio Framing &amp; Navigation Revision:</strong> Earlier versions of my site presented raw procedural notes (labeled simply <em>"Context"</em> and <em>"Procedure"</em>) without a clear target role or site-wide navigation. Based on portfolio feedback, I added a focused <strong>Target Role (Security Infrastructure &amp; Data Center Hardware Engineer)</strong>, an organized <strong>Table of Contents &amp; Sticky Navigation Bar</strong>, and restructured every artifact into <em>The Problem → My Contribution → The Result → What This Artifact Demonstrates</em>.
+            </li>
+            <li class="mb-2">
+              <strong>Coupling Capacitor &amp; Virtual Ground Node Revision (Artifacts 1 &amp; 4):</strong> Initial schematic drafts risked grounding coupling capacitors (<code>C6</code>/<code>C7</code>) or referencing single-supply op-amps directly to <code>0V</code>, causing severe rail clipping. Following simulation diagnostics and lab feedback, I placed the reference ground between matched $100\text{k}\Omega$ divider resistors (<code>R2</code>/<code>R3</code> for $\pm 1.65\text{V}$ rails; <code>R7</code>/<code>R8</code> for $+4.5\text{V}$ biasing) and routed coupling capacitors strictly in series.
+            </li>
+            <li class="mb-0">
+              <strong>Multi-Pole Roll-Off Upgrade (Artifact 2):</strong> When single-pole filtering allowed residual $100\text{Hz}$ and $20\text{kHz}$ photodiode noise to bleed into the $1250\text{Hz}\text{–}3666\text{Hz}$ window, I revised the architecture by adding 3-stage cascaded passive RC high-pass ($f_L \approx 1\text{kHz}$) and low-pass ($f_H \approx 10\text{kHz}$) sections around the dual active op-amp stages.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Design Journey Note -->
+      <div class="col-lg-6">
+        <div class="journey-card h-100 p-4">
+          <span class="rubric-tag">Semester Growth</span>
+          <h4 class="mb-3"><i class="fas fa-route me-2"></i>Design Journey Note: Start of Semester vs. Now</h4>
+          <p class="secondary-font">
+            <strong>What I can now do that I could not do at the beginning of the semester:</strong>
+          </p>
+          <ul class="secondary-font ps-3">
+            <li class="mb-2">
+              <strong>Synthesize Multi-Stage Active &amp; Passive Filters from Specifications:</strong> At the start of EC EN 340, I could solve textbook KVL/KCL equations on paper, but I did not know how to design a complete signal-conditioning chain to extract a $1\text{pA}$ target signal buried under milliamps of ambient noise. I can now calculate RC pole/zero corner frequencies ($f_c = \frac{1}{2\pi RC}$), cascade inverting bandpass op-amp stages for $120\text{dB}$ passband gain, and shape steep roll-off skirts without saturating the amplifier rails.
+            </li>
+            <li class="mb-2">
+              <strong>Design Single-Supply Virtual Grounds &amp; Power Decoupling Networks:</strong> Previously, I assumed op-amps always had ideal $\pm V_{CC}$ bench supplies. I can now design practical battery-powered single-supply circuits ($9\text{V}$ or $3.3\text{V}$) using mid-rail virtual ground dividers, multi-decade bypass capacitors ($1\text{mF}$ + $1\ \mu\text{F}$), and AC-coupling blocks so real-world embedded sensors operate cleanly without clipping.
+            </li>
+            <li class="mb-0">
+              <strong>Verify &amp; Debug Complex Topologies in NGspice Before Hardware Build:</strong> I can now translate schematic constraints into SPICE netlists, run AC sweep and transient analyses to diagnose node errors, and validate signal integrity before soldering or breadboarding.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Connection to BYU Aims -->
+      <div class="col-12" id="byu-aims">
+        <div class="journey-card p-4 p-md-5 mt-2">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <span class="rubric-tag">Mission Alignment</span>
+              <h4 class="mb-3"><i class="fas fa-university me-2"></i>Connection to the Aims of a BYU Education</h4>
+              <p class="secondary-font mb-3">
+                My work in EC EN 340 and my career preparation in cybersecurity and hardware infrastructure directly embody two core pillars from the <a href="https://aims.byu.edu/" target="_blank" rel="noopener">Aims of a BYU Education (aims.byu.edu)</a>:
+              </p>
+              <ul class="secondary-font ps-3 mb-0">
+                <li class="mb-2">
+                  <strong><a href="https://aims.byu.edu/" target="_blank" rel="noopener">Intellectually Enlarging</a>:</strong> BYU defines an intellectually enlarging education as one that integrates abstract theory with practical problem-solving competence. In EC EN 340, designing a dual-op-amp bandpass filter to isolate a $1250\text{Hz}\text{–}3666\text{Hz}$ optical signal from a $1481\text{Hz}$ power-line ripple and $100\text{Hz}/20\text{kHz}$ interference required uniting frequency-domain mathematics with real physical constraints like rail headroom and component tolerances. This same analytical rigor powers my work in network virtualization and security infrastructure—where theoretical protocols meet physical hardware realities.
+                </li>
+                <li class="mb-0">
+                  <strong><a href="https://aims.byu.edu/" target="_blank" rel="noopener">Lifelong Learning and Service</a> &amp; <a href="https://aims.byu.edu/" target="_blank" rel="noopener">Character Building</a>:</strong> Engineering and cybersecurity are disciplines of stewardship. Whether I am supervising student technicians in BYU's computer labs, verifying an NGspice netlist line-by-line so a circuit functions reliably, or hardening critical data center infrastructure, disciplined verification and continuous learning allow me to build dependable systems that protect and serve others with integrity.
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4 text-center mt-4 mt-lg-0">
+              <div class="p-4 rounded-3" style="background-color: var(--background-color); border: 1px solid rgba(100,149,237,0.3);">
+                <h5 class="fw-bold mb-2">BYU Aims Reference</h5>
+                <p class="secondary-font small mb-3">
+                  <em>"Spiritually Strengthening, Intellectually Enlarging, Character Building, and leading to Lifelong Learning and Service."</em>
+                </p>
+                <a class="btn btn-sm btn-outline-primary mb-2 w-100" href="https://aims.byu.edu/" target="_blank" rel="noopener">
+                  Visit aims.byu.edu ↗
+                </a>
+                <a class="btn btn-sm btn-outline-secondary w-100" href="/portfolio-overview/#connection-to-byu-aims">
+                  Read Full Aims Reflection →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
