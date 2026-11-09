@@ -1,0 +1,51 @@
+<section id="homelab" class="py-5">
+  <div class="container">
+    <div class="text-center mb-2">
+      <span class="rubric-tag">Security Infrastructure &amp; DevSecOps Project</span>
+    </div>
+    <h3 class="text-center mb-2">Enterprise Virtualization, K3s Kubernetes &amp; Security Homelab (IaC)</h3>
+    <p class="text-center secondary-font mx-auto mb-4" style="max-width: 820px;">
+      Alongside my hardware and circuit engineering work in EC EN 340, I architected and maintain a multi-node <strong>Proxmox VE &amp; 3-Node K3s Kubernetes</strong> environment automated with <strong>Ansible Infrastructure as Code (IaC)</strong>, <strong>CrowdSec Distributed IPS</strong>, and <strong>Longhorn + Cloudflare R2</strong> disaster recovery.
+    </p>
+
+    <div class="row justify-content-center px-2 px-md-4">
+      <div class="col-12">
+        <div class="journey-card p-4 p-md-5">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <img src="/images/homelab_architecture.svg" class="img-fluid rounded-3 shadow-sm" alt="Enterprise Security and K3s Homelab Architecture">
+            </div>
+            <div class="col-lg-6">
+              <div class="pb-2">
+                <span class="badge bg-primary me-1 mb-1">Proxmox VE &amp; LXC</span>
+                <span class="badge bg-primary me-1 mb-1">3-Node K3s Kubernetes</span>
+                <span class="badge bg-primary me-1 mb-1">Ansible IaC</span>
+                <span class="badge bg-primary me-1 mb-1">CrowdSec IPS</span>
+                <span class="badge bg-primary me-1 mb-1">Longhorn + Cloudflare R2</span>
+                <span class="badge bg-primary me-1 mb-1">C++ Telemetry</span>
+              </div>
+              <h4 class="mt-2 mb-3">Production-Grade Security &amp; Infrastructure Highlights</h4>
+              <ul class="secondary-font ps-3 mb-4">
+                <li class="mb-2">
+                  <strong>Distributed Intrusion Prevention (CrowdSec LAPI + Bouncers):</strong> Wrote Ansible playbooks (<code>deploy_crowdsec_agents.yml</code>) using <code>delegate_to</code> orchestration to automatically register Linux nodes with a central CrowdSec LAPI "Brain" and deploy <code>iptables</code> firewall bouncers.
+                </li>
+                <li class="mb-2">
+                  <strong>Zero-Trust Host Hardening (<code>harden_all.yml</code>):</strong> Automated default-deny <strong>UFW</strong> firewalls dynamically populated from inventory port variables, <strong>SSH <code>ed25519</code> key-only lockdown</strong> restricted to a <strong>Tailscale</strong> management IP, and <strong>Fail2Ban</strong> jails.
+                </li>
+                <li class="mb-2">
+                  <strong>3-Node K3s Cluster, Longhorn Storage &amp; Cloud DR:</strong> Deployed high-availability workloads across 3 nodes (<code>i5-server</code>, <code>lenovo-server</code>, <code>pi-server</code>) with <strong>Longhorn</strong> distributed block storage and automated 2:00 AM daily backups to <strong>Cloudflare R2</strong>, plus <strong>Traefik ACME DNS-01 TLS</strong> and <strong>Cloudflare Tunnels</strong>.
+                </li>
+                <li class="mb-0">
+                  <strong>&gt;50% Resource Consolidation &amp; C++ Monitoring:</strong> Migrated heavy VMs to lightweight Proxmox LXC containers (cutting RAM/CPU usage by &gt;50%) and built a <strong>custom C++ daemon</strong> to poll Proxmox REST API health metrics and alert via Discord webhooks.
+                </li>
+              </ul>
+              <a class="btn btn-outline-primary btn-sm" href="/posts/homelab-infrastructure-iac/">
+                Explore Full Homelab Architecture &amp; Playbooks →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

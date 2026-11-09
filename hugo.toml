@@ -1,6 +1,6 @@
 baseURL = "https://landon-wilmott.github.io/"
 locale = "en-us"
-title = "Landon Wilmott | Computer Engineering & EC EN 340 Portfolio"
+title = "Landon Wilmott | Security Infrastructure & Computer Engineering Portfolio"
 theme = "hugo-profile"
 enableRobotsTXT = true
 
@@ -74,29 +74,36 @@ enableRobotsTXT = true
   weight = 5
 
 [[Menus.main]]
+  identifier = "homelab-iac"
+  name = "Homelab IaC"
+  title = "Enterprise Security & K3s Homelab Architecture"
+  url = "/posts/homelab-infrastructure-iac/"
+  weight = 3
+
+[[Menus.main]]
   identifier = "design-journey"
   name = "Revision & Journey"
   title = "Evidence of Revision & Design Journey"
   url = "/#design-journey"
-  weight = 3
+  weight = 4
 
 [[Menus.main]]
   identifier = "byu-aims"
   name = "BYU Aims"
   title = "Connection to BYU Aims"
   url = "/#byu-aims"
-  weight = 4
+  weight = 5
 
 [[Menus.main]]
   identifier = "master-portfolio"
   name = "Full Portfolio & TOC"
   title = "Master Portfolio Page with Sidebar TOC"
   url = "/portfolio-overview/"
-  weight = 5
+  weight = 6
 
 [params]
   title = "Landon Wilmott"
-  description = "Computer Engineering & Cybersecurity Portfolio for Landon Wilmott at Brigham Young University, featuring EC EN 340 circuit design artifacts, design journey reflections, and BYU Aims alignment."
+  description = "Security Infrastructure Engineer & BYU Computer Engineering Portfolio (GPA 3.88) for Landon Wilmott, featuring Ansible/Proxmox/K3s Infrastructure-as-Code, EC EN 340 circuit design artifacts, and BYU Aims alignment."
   favicon = "/fav.png"
   useBootstrapCDN = false
   mathjax = true
@@ -127,10 +134,10 @@ enableRobotsTXT = true
 
   [params.hero]
     enable = true
-    intro = "Brigham Young University • Computer Engineering & Cybersecurity"
+    intro = "BYU Computer Engineering (3.88 GPA) • Cybersecurity Minor • CompTIA Sec+ / Net+ / A+"
     title = "Landon Wilmott"
-    subtitle = "Target Role: Security Infrastructure & Data Center Engineer"
-    content = "I am a Computer Engineering student at Brigham Young University with a minor in Cybersecurity. Alongside my studies, I supervise student employees in IT support and computer lab maintenance, and I hold CompTIA A+, Network+, and Security+ certifications. I am actively pursuing Security Infrastructure Engineer and data center roles where I can apply my background in hardware maintenance, analog/digital circuit diagnostics, network virtualization, and systems administration."
+    subtitle = "Target Role: Security Infrastructure & Systems Engineer"
+    content = "Computer Engineering student at Brigham Young University (3.88 GPA) and Endpoint Engineering & Security Manager at BYU Life Sciences IT overseeing 8 student technicians and 1,200+ endpoints. Certified in CompTIA Security+, Network+, and A+, with a proven track record in automating server deployments, distributed intrusion prevention (CrowdSec), and zero-trust security hardening using Ansible, Docker, Proxmox, Longhorn, and K3s Kubernetes."
     image = "/images/circuit_hero.svg"
     [params.hero.bottomImage]
       enable = true
@@ -144,34 +151,35 @@ enableRobotsTXT = true
       icon = "fab fa-github"
       url = "https://github.com/landon-wilmott"
     [[params.hero.socialLinks.fontAwesomeIcons]]
+      icon = "fas fa-server"
+      url = "/posts/homelab-infrastructure-iac/"
+    [[params.hero.socialLinks.fontAwesomeIcons]]
       icon = "fas fa-university"
       url = "https://aims.byu.edu/"
     [[params.hero.socialLinks.fontAwesomeIcons]]
       icon = "fas fa-envelope"
-      url = "mailto:law2003@byu.edu"
+      url = "mailto:wilmottlandon@gmail.com"
 
   [params.about]
     enable = true
     title = "Professional Introduction & Target Role"
-    targetRole = "Security Infrastructure Engineer / Data Center Hardware & Systems Engineer"
+    targetRole = "Security Infrastructure Engineer / DevSecOps & Data Center Systems Engineer"
     image = "/images/profile_badge.svg"
     content = """
-I bridge the gap between **physical-layer hardware engineering** and **enterprise cybersecurity infrastructure**. Through my Computer Engineering coursework at BYU (including **EC EN 340: Electronic Circuit Design**) and my leadership role supervising IT support and computer lab maintenance, I have developed a rigorous, systems-level approach to troubleshooting—from microvolt-level analog signal integrity and SPICE simulation up to enterprise network virtualization and security hardening.
+I am a **Computer Engineering** student at **Brigham Young University (GPA: 3.88)** with a minor in **Cybersecurity**, currently serving as **Endpoint Engineering and Security Manager** for BYU Life Sciences IT, where I manage a team of 8 student technicians and track/remediate vulnerabilities across **1,200+ organizational endpoints**.
 
-This revised portfolio presents **four selected EC EN 340 engineering artifacts**, documented **evidence of revision based on feedback**, my **semester Design Journey reflection**, and a direct connection between my engineering practice and the **[Aims of a BYU Education](https://aims.byu.edu/)**.
+I specialize in building resilient, **security-first infrastructure**—from physical-layer analog/digital hardware design (**EC EN 340**) up to automated Linux server provisioning, **Proxmox LXC virtualization**, **3-node K3s Kubernetes clusters**, **Longhorn distributed storage**, and **Ansible Infrastructure as Code (IaC)**. This portfolio showcases **four selected EC EN 340 circuit design artifacts**, **evidence of revision and my semester Design Journey**, a connection to the **[Aims of a BYU Education](https://aims.byu.edu/)**, and an employer-facing look at my **[Security & K3s Homelab Architecture](/posts/homelab-infrastructure-iac/)**.
 """
     [params.about.skills]
       enable = true
-      title = "Core Technical Competencies & Industry Certifications:"
+      title = "Technical Stack, Security Tooling & Certifications:"
       items = [
-        "**CompTIA Security+, Network+ & A+** Certified",
-        "**NGspice & Circuit Simulation** (AC/Transient/DC Bias)",
-        "**Active & Passive Filter Design** (Cascaded Op-Amps)",
-        "**Single-Supply Analog Interfacing** (Virtual Grounds)",
-        "**Network Virtualization & Systems Administration**",
-        "**Data Center Hardware Maintenance & Diagnostics**",
-        "**IT Team Supervision & Technical Operations**",
-        "**Root-Cause Hardware & Netlist Debugging**"
+        "**Certifications:** CompTIA Security+, Network+, A+",
+        "**IaC & Virtualization:** Proxmox VE (LXC/KVM), Ansible, OpenTofu, Docker, Portainer",
+        "**Kubernetes & Cloud DR:** 3-Node K3s, Longhorn Block Storage, Traefik ACME TLS, Cloudflare R2 & Tunnels",
+        "**Security & Hardening:** CrowdSec LAPI + Bouncers, UFW, Fail2Ban, SSH ed25519, Tailscale VPN, Vaultwarden",
+        "**Languages & OS:** C, C++, Python, Java, Bash • Linux (Ubuntu Server, Fedora, Kali), Windows, macOS",
+        "**Hardware & Circuit Design:** NGspice Simulation, Cascaded Active Filters, Virtual-Ground Op-Amps"
       ]
 
   [params.projects]
@@ -237,34 +245,56 @@ This revised portfolio presents **four selected EC EN 340 engineering artifacts*
 
   [params.experience]
     enable = true
-    title = "Professional & Technical Experience"
+    title = "Professional & Leadership Experience"
+
     [[params.experience.items]]
-      company = "BYU IT & Lab Operations"
+      company = "Life Sciences IT (BYU)"
       companyUrl = "https://www.byu.edu"
       [[params.experience.items.jobs]]
-        name = "IT Support & Computer Lab Maintenance Supervisor"
-        date = "Present"
-        info = { content = "Supervising student technicians in hardware maintenance, systems administration, and IT support" }
+        name = "Endpoint Engineering and Security Manager"
+        date = "Aug 2026 - Present"
+        info = { content = "Leading endpoint security, vulnerability remediation across 1,200+ systems, and managing 8 student technicians" }
         content = """
-Supervise and mentor student employees responsible for enterprise IT support, workstation provisioning, and hardware/network maintenance across university computer labs.
-
-- **Hardware & Infrastructure Maintenance:** Lead physical hardware diagnostics, component-level troubleshooting, imaging, and preventative maintenance across high-availability lab environments.
-- **Systems & Network Administration:** Apply CompTIA **A+**, **Network+**, and **Security+** principles to maintain secure network connectivity, virtualized systems, and endpoint reliability.
-- **Operational Leadership:** Train student technicians on standardized diagnostic workflows, ticket escalation, and quality assurance.
+- Directly manage and mentor a team of **8 student technicians**, taking ownership of operational documentation and standardizing engineering support procedures.
+- Track, prioritize, and resolve security vulnerabilities across an enterprise environment of **over 1,200 endpoints**.
 """
-    [[params.experience.items]]
-      company = "BYU EC EN 340"
-      companyUrl = "https://ece.byu.edu"
       [[params.experience.items.jobs]]
-        name = "Electronic Circuit Design & Simulation (Student Engineer)"
-        date = "Fall 2026"
-        info = { content = "Analog circuit design, active filtering, SPICE verification, and hardware prototyping" }
+        name = "IT Specialist"
+        date = "Aug 2025 - Aug 2026"
+        info = { content = "Reduced endpoint vulnerability exposure by 20% and boosted ticket closure rate by 10%" }
         content = """
-Designed, simulated, and iteratively refined multi-stage analog signal-conditioning circuits in **NGspice** and physical lab hardware.
+- Maintained security compliance for **200+ network endpoints**, successfully **reducing organizational vulnerability exposure by 20%**.
+- Provided remote technical support and advanced troubleshooting for Windows and macOS systems, contributing to a **10% increase in the team's average ticket closure rate**.
+"""
 
-- **Multi-Stage Active Filter Architecture:** Engineered dual-op-amp cascaded bandpass filters ($120\\text{dB}$ gain) and 3-stage passive RC networks to isolate picowatt/nanoamp optical signals from heavy out-of-band interference.
-- **Single-Supply & Power Integrity Design:** Synthesized mid-rail virtual grounds ($+4.5\\text{V}$ and $\\pm 1.65\\text{V}$) and multi-stage power-supply ripple decoupling filters for autonomous robotics sensors.
-- **Simulation-First Verification:** Audited SPICE netlists and frequency-domain Bode responses to eliminate node-grounding bugs before hardware build.
+    [[params.experience.items]]
+      company = "Homelab Infrastructure (IaC)"
+      companyUrl = "/posts/homelab-infrastructure-iac/"
+      [[params.experience.items.jobs]]
+        name = "Security Infrastructure & Kubernetes Architect (Personal Lab)"
+        date = "Ongoing"
+        info = { content = "Proxmox VE, 3-Node K3s Cluster, Ansible Security Hardening, CrowdSec IPS, Longhorn + Cloudflare R2" }
+        content = """
+- Architected a **Proxmox VE** virtual server environment and a **3-node K3s Kubernetes cluster** (`i5-server`, `lenovo-server`, `pi-server`), migrating heavy VMs to lightweight **LXC containers** to **reduce compute/memory consumption by over 50%**.
+- Engineered **Ansible** playbooks (`deploy_crowdsec_agents.yml`, `harden_all.yml`) to automate **CrowdSec LAPI** distributed intrusion prevention, default-deny **UFW** firewall rules, **SSH `ed25519` lockdown**, and **Fail2Ban** across Linux hosts.
+- Deployed **Longhorn** distributed block storage with automated 2:00 AM daily offsite disaster-recovery backups to **Cloudflare R2**, plus **Traefik ACME DNS-01 TLS** and **Cloudflare Tunnels**.
+- Developed a custom **C++ daemon** to poll Proxmox REST API health telemetry and route automated alerts to a **Discord webhook**.
+"""
+
+    [[params.experience.items]]
+      company = "Volunteer & Production"
+      companyUrl = "https://www.churchofjesuschrist.org"
+      [[params.experience.items.jobs]]
+        name = "Full-Time Volunteer Representative (Papeete, Tahiti)"
+        date = "Sep 2022 - Oct 2024"
+        content = """
+- Served for two years in **Papeete, Tahiti**, developing cross-cultural leadership, French/Tahitian communication, and team training skills.
+"""
+      [[params.experience.items.jobs]]
+        name = "Operator Level 1 — Bonnell (Clearfield, UT)"
+        date = "May 2021 - Aug 2022"
+        content = """
+- Maintained strict quality control and adherence to safety protocols in a high-demand industrial production environment.
 """
 
   [params.education]
@@ -273,33 +303,46 @@ Designed, simulated, and iteratively refined multi-stage analog signal-condition
     index = true
     [[params.education.items]]
       title = "B.S. in Computer Engineering (Minor in Cybersecurity)"
-      date = "In Progress"
+      date = "Sep 2025 - Apr 2028"
+      GPA = "3.88 / 4.00"
       content = """
 **Relevant Coursework & Focus Areas:**
 - **EC EN 340 (Electronic Circuit Design 1):** Op-Amp Active Filters, Virtual Ground Biasing, Power Decoupling, Diode/Transistor Circuits, and NGspice Simulation.
-- **Cybersecurity & Infrastructure:** Network Virtualization, Systems Administration, Hardware Security, and Enterprise Infrastructure Hardening.
-- **BYU Aims Integration:** Applying *Intellectually Enlarging* theory to hands-on hardware and security engineering in alignment with the [Aims of a BYU Education](https://aims.byu.edu/).
+- **Cybersecurity & Infrastructure Engineering:** Vulnerability Management, Network Virtualization, Linux Hardening, Infrastructure as Code (Ansible/K3s), and Systems Administration.
+- **BYU Aims Integration:** Uniting *Intellectually Enlarging* engineering theory with practical hardware and security stewardship ([aims.byu.edu](https://aims.byu.edu/)).
 """
       [params.education.items.school]
         name = "Brigham Young University (Provo, UT)"
         url = "https://www.byu.edu"
       [params.education.items.featuredLink]
         enable = true
-        name = "View EC EN 340 Portfolio Overview"
+        name = "View EC EN 340 & Homelab Portfolio Overview"
         url = "/portfolio-overview/"
 
     [[params.education.items]]
       title = "CompTIA Security+, Network+, and A+ Certifications"
       date = "Certified"
       content = """
-Hold the full **CompTIA Secure Infrastructure Specialist** triad, validating end-to-end readiness for **Security Infrastructure Engineer** and **Data Center Engineer** roles:
-- **CompTIA Security+:** Threat mitigation, zero-trust architecture, cryptographic protocols, and secure systems administration.
-- **CompTIA Network+:** Network topology, routing/switching, VLAN segmentation, network virtualization, and packet-level troubleshooting.
-- **CompTIA A+:** Enterprise hardware maintenance, server/workstation diagnostics, operating systems, and IT operational support.
+Hold the full **CompTIA Secure Infrastructure Specialist** stack:
+- **CompTIA Security+:** Threat detection, zero-trust architecture, access control, secrets management, and vulnerability mitigation.
+- **CompTIA Network+:** TCP/IP, VLANs, DNS/DHCP, HTTP/HTTPS, SSL/TLS, VPNs (Tailscale/WireGuard), and OSI layer troubleshooting.
+- **CompTIA A+:** Enterprise Windows/Linux/macOS administration, hardware diagnostics, and endpoint fleet management.
 """
       [params.education.items.school]
         name = "CompTIA Certified Professional"
         url = "https://www.comptia.org"
+      [params.education.items.featuredLink]
+        enable = false
+
+    [[params.education.items]]
+      title = "Associate of Science — General Studies"
+      date = "Aug 2019 - May 2023"
+      content = """
+Completed foundational mathematics, sciences, and general education degree requirements prior to transferring to Brigham Young University's Computer Engineering program.
+"""
+      [params.education.items.school]
+        name = "Weber State University (Ogden, UT)"
+        url = "https://www.weber.edu"
       [params.education.items.featuredLink]
         enable = false
 
@@ -309,15 +352,15 @@ Hold the full **CompTIA Secure Infrastructure Specialist** triad, validating end
   [params.contact]
     enable = true
     title = "Contact & Connect"
-    content = "I am actively seeking Security Infrastructure Engineer, Data Center Hardware Engineer, and Systems Engineering opportunities. Feel free to reach out to discuss my EC EN 340 circuit designs, cybersecurity background, or open engineering roles."
-    btnName = "Email Landon Wilmott"
-    btnLink = "mailto:law2003@byu.edu"
+    content = "I am actively seeking Security Infrastructure Engineer, DevSecOps, and Data Center / Systems Engineering opportunities. Reach out via email (`wilmottlandon@gmail.com`) or phone (`(801) 546-3533`) to discuss my infrastructure automation, EC EN 340 circuit design work, or open engineering roles."
+    btnName = "Email wilmottlandon@gmail.com"
+    btnLink = "mailto:wilmottlandon@gmail.com"
 
   [params.footer]
     [params.footer.recentPosts]
       path = "posts"
-      count = 4
-      title = "EC EN 340 Artifacts"
+      count = 5
+      title = "Artifacts & Homelab Projects"
       enable = true
       disableFeaturedImage = false
     [params.footer.socialNetworks]

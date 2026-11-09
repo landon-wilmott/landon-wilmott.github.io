@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Portfolio on Landon Wilmott | Computer Engineering &amp; EC EN 340 Portfolio</title><link>https://landon-wilmott.github.io/tags/portfolio/</link><description>Recent content in Portfolio on Landon Wilmott | Computer Engineering &amp; EC EN 340 Portfolio</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://landon-wilmott.github.io/tags/portfolio/index.xml" rel="self" type="application/rss+xml"/><item><title>EC EN 340 Engineering Portfolio &amp; Resume Overview</title><link>https://landon-wilmott.github.io/portfolio-overview/</link><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><guid>https://landon-wilmott.github.io/portfolio-overview/</guid><description>&lt;h2 id="1-professional-introduction--target-role"&gt;1. Professional Introduction &amp;amp; Target Role&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Target Role:&lt;/strong&gt; &lt;strong&gt;Security Infrastructure Engineer / Data Center Hardware &amp;amp; Systems Engineer&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;I am &lt;strong&gt;Landon Wilmott&lt;/strong&gt;, a Computer Engineering student at &lt;strong&gt;Brigham Young University (BYU)&lt;/strong&gt; with a minor in &lt;strong&gt;Cybersecurity&lt;/strong&gt;. Alongside my engineering coursework, I supervise student employees in IT support and computer lab maintenance, and I hold &lt;strong&gt;CompTIA A+, Network+, and Security+&lt;/strong&gt; certifications.&lt;/p&gt;
-&lt;p&gt;I am actively pursuing &lt;strong&gt;Security Infrastructure Engineer&lt;/strong&gt; and &lt;strong&gt;Data Center Hardware / Systems Engineering&lt;/strong&gt; roles where I can combine my hands-on background in hardware maintenance, analog/digital circuit diagnostics, network virtualization, and systems administration to build resilient, high-availability infrastructure.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Portfolio on Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio</title>
+		<link>http://localhost:1313/tags/portfolio/</link>
+		<description>Recent content in Portfolio on Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/portfolio/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>EC EN 340 Engineering Portfolio &amp; Resume Overview</title>
+				<link>http://localhost:1313/portfolio-overview/</link>
+				<pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/portfolio-overview/</guid>
+				<description>&lt;h2 id=&#34;1-professional-introduction--target-role&#34;&gt;1. Professional Introduction &amp;amp; Target Role&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Target Role:&lt;/strong&gt; &lt;strong&gt;Security Infrastructure Engineer / DevSecOps &amp;amp; Data Center Systems Engineer&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;I am &lt;strong&gt;Landon Wilmott&lt;/strong&gt;, a Computer Engineering student at &lt;strong&gt;Brigham Young University (GPA: 3.88)&lt;/strong&gt; with a minor in &lt;strong&gt;Cybersecurity&lt;/strong&gt; (and an A.S. from Weber State University). Alongside my engineering coursework, I serve as &lt;strong&gt;Endpoint Engineering and Security Manager&lt;/strong&gt; at &lt;strong&gt;BYU Life Sciences IT&lt;/strong&gt;, where I directly manage and mentor a team of &lt;strong&gt;8 student technicians&lt;/strong&gt; and track/remediate security vulnerabilities across &lt;strong&gt;1,200+ endpoints&lt;/strong&gt; (after previously reducing vulnerability exposure by 20% across 200+ endpoints as an IT Specialist).&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

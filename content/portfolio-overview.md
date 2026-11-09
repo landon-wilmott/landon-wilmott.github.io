@@ -16,11 +16,11 @@ mathjax: true
 
 ## 1. Professional Introduction & Target Role
 
-**Target Role:** **Security Infrastructure Engineer / Data Center Hardware & Systems Engineer**
+**Target Role:** **Security Infrastructure Engineer / DevSecOps & Data Center Systems Engineer**
 
-I am **Landon Wilmott**, a Computer Engineering student at **Brigham Young University (BYU)** with a minor in **Cybersecurity**. Alongside my engineering coursework, I supervise student employees in IT support and computer lab maintenance, and I hold **CompTIA A+, Network+, and Security+** certifications.
+I am **Landon Wilmott**, a Computer Engineering student at **Brigham Young University (GPA: 3.88)** with a minor in **Cybersecurity** (and an A.S. from Weber State University). Alongside my engineering coursework, I serve as **Endpoint Engineering and Security Manager** at **BYU Life Sciences IT**, where I directly manage and mentor a team of **8 student technicians** and track/remediate security vulnerabilities across **1,200+ endpoints** (after previously reducing vulnerability exposure by 20% across 200+ endpoints as an IT Specialist).
 
-I am actively pursuing **Security Infrastructure Engineer** and **Data Center Hardware / Systems Engineering** roles where I can combine my hands-on background in hardware maintenance, analog/digital circuit diagnostics, network virtualization, and systems administration to build resilient, high-availability infrastructure.
+I hold **CompTIA A+, Network+, and Security+** certifications and maintain an enterprise-grade **[Proxmox VE & 3-Node K3s Kubernetes Homelab](/posts/homelab-infrastructure-iac/)** automated with **Ansible**, **CrowdSec Distributed IPS**, **Longhorn + Cloudflare R2** disaster recovery, and a **custom C++ health monitoring daemon**.
 
 ---
 
@@ -36,6 +36,7 @@ I am actively pursuing **Security Infrastructure Engineer** and **Data Center Ha
 4. [Evidence of Revision Based on Feedback](#4-evidence-of-revision-based-on-feedback)
 5. [Design Journey Note: Start of Semester vs. Now](#5-design-journey-note-start-of-semester-vs-now)
 6. [Connection to BYU Aims (aims.byu.edu)](#6-connection-to-byu-aims)
+7. [Security & K3s Homelab Architecture (Proxmox, Ansible & CrowdSec)](/posts/homelab-infrastructure-iac/)
 
 ---
 

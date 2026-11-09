@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hlBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="920" height="440" rx="18" fill="url(#hlBg)" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.4" />
+
+  <!-- Title Banner -->
+  <rect x="24" y="20" width="872" height="48" rx="10" fill="#020617" fill-opacity="0.7" stroke="#38bdf8" stroke-opacity="0.35" />
+  <text x="460" y="50" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="17" font-weight="bold">
+    ENTERPRISE SECURITY &amp; K3S KUBERNETES HOMELAB ARCHITECTURE (PROXMOX • ANSIBLE • LONGHORN)
+  </text>
+
+  <!-- Column 1: Zero-Trust Edge & Security Plane -->
+  <rect x="24" y="86" width="270" height="330" rx="12" fill="#0f172a" stroke="#f43f5e" stroke-width="2" stroke-opacity="0.7" />
+  <text x="159" y="114" text-anchor="middle" fill="#fda4af" font-family="sans-serif" font-size="14" font-weight="bold">1. ZERO-TRUST &amp; SECURITY PLANE</text>
+
+  <rect x="42" y="130" width="234" height="58" rx="8" fill="#1e293b" stroke="#fb7185" stroke-opacity="0.5" />
+  <text x="159" y="153" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold">CrowdSec LAPI Brain + Bouncers</text>
+  <text x="159" y="173" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">Distributed IPS • Auto API Provisioning</text>
+
+  <rect x="42" y="200" width="234" height="58" rx="8" fill="#1e293b" stroke="#fb7185" stroke-opacity="0.5" />
+  <text x="159" y="223" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold">Ansible Hardening Playbooks</text>
+  <text x="159" y="243" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">Default-Deny UFW • Fail2Ban • SSH ed25519</text>
+
+  <rect x="42" y="270" width="234" height="58" rx="8" fill="#1e293b" stroke="#fb7185" stroke-opacity="0.5" />
+  <text x="159" y="293" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold">Cloudflare Tunnels &amp; Tailscale</text>
+  <text x="159" y="313" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">Zero Inbound WAN Ports • Pi-hole DNS</text>
+
+  <rect x="42" y="340" width="234" height="58" rx="8" fill="#1e293b" stroke="#fb7185" stroke-opacity="0.5" />
+  <text x="159" y="363" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold">Traefik ACME DNS-01 TLS</text>
+  <text x="159" y="383" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">Automated Let's Encrypt Certs via K8s</text>
+
+  <!-- Column 2: Proxmox VE & LXC Virtualization -->
+  <rect x="325" y="86" width="270" height="330" rx="12" fill="#0f172a" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.7" />
+  <text x="460" y="114" text-anchor="middle" fill="#7dd3fc" font-family="sans-serif" font-size="14" font-weight="bold">2. PROXMOX VE &amp; LXC FLEET</text>
+
+  <rect x="343" y="130" width="234" height="58" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.5" />
+  <text x="460" y="153" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold">VM-to-LXC Consolidation</text>
+  <text x="460" y="173" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">&gt;50% RAM/CPU Reduction Across Nodes</text>
+
+  <rect x="343" y="200" width="234" height="58" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.5" />
+  <text x="460" y="223" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold">C++ Proxmox Health Monitor</text>
+  <text x="460" y="243" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">REST API Telemetry → Discord Webhooks</text>
+
+  <rect x="343" y="270" width="234" height="58" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.5" />
+  <text x="460" y="293" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold">Core Infrastructure LXCs</text>
+  <text x="460" y="313" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">Vaultwarden • Pi-hole • Portainer • CrowdSec</text>
+
+  <rect x="343" y="340" width="234" height="58" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.5" />
+  <text x="460" y="363" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold">Automated Lifecycle Playbooks</text>
+  <text x="460" y="383" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">Zero-Touch Node Bootstrap &amp; Patching</text>
+
+  <!-- Column 3: 3-Node K3s Kubernetes & Longhorn DR -->
+  <rect x="626" y="86" width="270" height="330" rx="12" fill="#0f172a" stroke="#4ade80" stroke-width="2" stroke-opacity="0.7" />
+  <text x="761" y="114" text-anchor="middle" fill="#86efac" font-family="sans-serif" font-size="14" font-weight="bold">3. K3S CLUSTER &amp; CLOUD DR</text>
+
+  <rect x="644" y="130" width="234" height="58" rx="8" fill="#1e293b" stroke="#4ade80" stroke-opacity="0.5" />
+  <text x="761" y="153" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold">3-Node K3s Kubernetes</text>
+  <text x="761" y="173" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">i5-server • lenovo-server • pi-server</text>
+
+  <rect x="644" y="200" width="234" height="58" rx="8" fill="#1e293b" stroke="#4ade80" stroke-opacity="0.5" />
+  <text x="761" y="223" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold">Longhorn Block Storage</text>
+  <text x="761" y="243" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">Distributed iSCSI/NFS Replica Volumes</text>
+
+  <rect x="644" y="270" width="234" height="58" rx="8" fill="#1e293b" stroke="#4ade80" stroke-opacity="0.5" />
+  <text x="761" y="293" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold">Cloudflare R2 Offsite Backups</text>
+  <text x="761" y="313" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">Daily 2:00 AM Cron • 7-Day S3 Retention</text>
+
+  <rect x="644" y="340" width="234" height="58" rx="8" fill="#1e293b" stroke="#4ade80" stroke-opacity="0.5" />
+  <text x="761" y="363" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold">Declarative K8s Workloads</text>
+  <text x="761" y="383" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">Uptime Kuma • Immich • Wiki.js • Homarr</text>
+</svg>

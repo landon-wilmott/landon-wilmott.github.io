@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>CrowdSec IPS on Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio</title>
+		<link>http://localhost:1313/tags/crowdsec-ips/</link>
+		<description>Recent content in CrowdSec IPS on Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/crowdsec-ips/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Security &amp; Cloud-Native Homelab Architecture (Proxmox, K3s, CrowdSec &amp; Ansible IaC)</title>
+				<link>http://localhost:1313/posts/homelab-infrastructure-iac/</link>
+				<pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/homelab-infrastructure-iac/</guid>
+				<description>&lt;h2 id=&#34;architecture-overview&#34;&gt;Architecture Overview&lt;/h2&gt;&#xA;&lt;p&gt;To apply enterprise &lt;strong&gt;Security Infrastructure Engineering&lt;/strong&gt;, &lt;strong&gt;DevSecOps&lt;/strong&gt;, and &lt;strong&gt;Site Reliability Engineering (SRE)&lt;/strong&gt; principles hands-on, I architected and maintain a multi-node virtualized and containerized homelab environment managed through &lt;strong&gt;Infrastructure as Code (IaC)&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/homelab_architecture.svg&#34; alt=&#34;Homelab Architecture Diagram&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;core-infrastructure-metrics--highlights&#34;&gt;Core Infrastructure Metrics &amp;amp; Highlights&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;&amp;gt;50% Compute &amp;amp; Memory Footprint Reduction:&lt;/strong&gt; Migrated heavy full-OS virtual machines on &lt;strong&gt;Proxmox VE&lt;/strong&gt; to lightweight, kernel-sharing &lt;strong&gt;LXC containers&lt;/strong&gt; and a &lt;strong&gt;3-node K3s Kubernetes cluster&lt;/strong&gt; (&lt;code&gt;i5-server&lt;/code&gt;, &lt;code&gt;lenovo-server&lt;/code&gt;, &lt;code&gt;pi-server&lt;/code&gt;).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Distributed Intrusion Prevention (CrowdSec LAPI + Bouncers):&lt;/strong&gt; Automated the deployment of a centralized &lt;strong&gt;CrowdSec Local API (LAPI) &amp;ldquo;Brain&amp;rdquo;&lt;/strong&gt; node (&lt;code&gt;crowdsec_lxc&lt;/code&gt;) and distributed &lt;code&gt;crowdsec-firewall-bouncer-iptables&lt;/code&gt; agents across Linux hosts via Ansible delegation.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Defense-in-Depth Host Hardening:&lt;/strong&gt; Engineered idempotent &lt;strong&gt;Ansible&lt;/strong&gt; playbooks enforcing default-deny &lt;strong&gt;UFW&lt;/strong&gt; firewall rules from inventory port definitions, &lt;strong&gt;SSH &lt;code&gt;ed25519&lt;/code&gt; key-only lockdown&lt;/strong&gt;, &lt;strong&gt;Fail2Ban&lt;/strong&gt; jail policies, and &lt;strong&gt;Tailscale&lt;/strong&gt; zero-trust management access.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;High-Availability Block Storage &amp;amp; Offsite Cloud DR:&lt;/strong&gt; Deployed &lt;strong&gt;Longhorn&lt;/strong&gt; distributed block storage across the K3s cluster with automated &lt;code&gt;RecurringJob&lt;/code&gt; daily snapshots at 02:00 AM backed up off-site to &lt;strong&gt;Cloudflare R2&lt;/strong&gt; S3-compatible storage.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Custom C++ Proxmox Telemetry Daemon:&lt;/strong&gt; Built a custom &lt;strong&gt;C++&lt;/strong&gt; monitoring service that queries the Proxmox REST API for node CPU, memory, and storage health metrics and dispatches real-time alerts to a &lt;strong&gt;Discord webhook&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-automated-distributed-ips-with-crowdsec--ansible-delegation&#34;&gt;1. Automated Distributed IPS with CrowdSec &amp;amp; Ansible Delegation&lt;/h2&gt;&#xA;&lt;p&gt;Rather than configuring intrusion detection manually on each server, I wrote an Ansible playbook (&lt;code&gt;deploy_crowdsec_agents.yml&lt;/code&gt;) that provisions a multi-node &lt;strong&gt;CrowdSec&lt;/strong&gt; security mesh:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
