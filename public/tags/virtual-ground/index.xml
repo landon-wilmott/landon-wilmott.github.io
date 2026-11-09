@@ -1,24 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Virtual Ground on Landon Wilmott | Computer Engineering &amp; EC EN 340 Portfolio</title>
-		<link>http://localhost:1313/tags/virtual-ground/</link>
-		<description>Recent content in Virtual Ground on Landon Wilmott | Computer Engineering &amp; EC EN 340 Portfolio</description>
-		<generator>Hugo</generator>
-		<language>en-us</language>
-		
-		
-		
-		
-			<lastBuildDate>Thu, 08 Oct 2026 00:00:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/virtual-ground/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Artifact 1: Power Supply Rail Splitter &amp; 3-Stage Ripple Decoupling Network</title>
-				<link>http://localhost:1313/posts/artifact-1-rail-splitter/</link>
-				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/artifact-1-rail-splitter/</guid>
-				<description>&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;&#xA;&lt;p&gt;In precision analog optical receivers, noise on the DC power rails couples directly into high-gain operational amplifier stages and corrupts microvolt-level sensor signals. For this &lt;strong&gt;EC EN 340&lt;/strong&gt; milestone, our circuit was powered by a single $3.3\text{V}$ DC voltage source (&lt;code&gt;V1&lt;/code&gt;) contaminated with a $30\text{mV}$ AC ripple at $1481\text{Hz}$—sitting right inside our target $1250\text{Hz}\text{–}3666\text{Hz}$ signal passband. Furthermore, the dual-rail operational amplifiers required clean, symmetric $+1.65\text{V}$ (&lt;code&gt;vp&lt;/code&gt;) and $-1.65\text{V}$ (&lt;code&gt;vn&lt;/code&gt;) supply rails while strictly preserving the starter netlist&amp;rsquo;s &lt;code&gt;V1&lt;/code&gt;, &lt;code&gt;I1&lt;/code&gt;, and &lt;code&gt;R1&lt;/code&gt; components.&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Virtual Ground on Landon Wilmott | Computer Engineering &amp; EC EN 340 Portfolio</title><link>https://landon-wilmott.github.io/tags/virtual-ground/</link><description>Recent content in Virtual Ground on Landon Wilmott | Computer Engineering &amp; EC EN 340 Portfolio</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 08 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://landon-wilmott.github.io/tags/virtual-ground/index.xml" rel="self" type="application/rss+xml"/><item><title>Artifact 1: Power Supply Rail Splitter &amp; 3-Stage Ripple Decoupling Network</title><link>https://landon-wilmott.github.io/posts/artifact-1-rail-splitter/</link><pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate><guid>https://landon-wilmott.github.io/posts/artifact-1-rail-splitter/</guid><description>&lt;h2 id="the-problem"&gt;The Problem&lt;/h2&gt;
+&lt;p&gt;In precision analog optical receivers, noise on the DC power rails couples directly into high-gain operational amplifier stages and corrupts microvolt-level sensor signals. For this &lt;strong&gt;EC EN 340&lt;/strong&gt; milestone, our circuit was powered by a single $3.3\text{V}$ DC voltage source (&lt;code&gt;V1&lt;/code&gt;) contaminated with a $30\text{mV}$ AC ripple at $1481\text{Hz}$—sitting right inside our target $1250\text{Hz}\text{–}3666\text{Hz}$ signal passband. Furthermore, the dual-rail operational amplifiers required clean, symmetric $+1.65\text{V}$ (&lt;code&gt;vp&lt;/code&gt;) and $-1.65\text{V}$ (&lt;code&gt;vn&lt;/code&gt;) supply rails while strictly preserving the starter netlist&amp;rsquo;s &lt;code&gt;V1&lt;/code&gt;, &lt;code&gt;I1&lt;/code&gt;, and &lt;code&gt;R1&lt;/code&gt; components.&lt;/p&gt;</description></item></channel></rss>
