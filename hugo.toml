@@ -20,85 +20,88 @@ enableRobotsTXT = true
     endLevel = 4
     ordered = false
 
+# Clean, simplified top navigation with a single Table of Contents dropdown
 [[Menus.main]]
-  identifier = "toc"
-  name = "TOC"
-  title = "Portfolio Table of Contents"
-  url = "/#toc"
+  identifier = "about-link"
+  name = "About"
+  title = "Professional Introduction & Target Role"
+  url = "/#about"
   weight = 1
 
 [[Menus.main]]
-  identifier = "artifacts-dropdown"
-  name = "EC EN 340 Artifacts"
-  title = "Selected EC EN 340 Artifacts"
+  identifier = "experience-link"
+  name = "Experience"
+  title = "Professional & Leadership Experience"
+  url = "/#experience"
   weight = 2
 
 [[Menus.main]]
-  identifier = "artifacts-home"
-  name = "All 4 Artifacts (Overview)"
-  title = "All 4 Artifacts on Homepage"
-  url = "/#projects"
-  parent = "artifacts-dropdown"
-  weight = 1
-
-[[Menus.main]]
-  identifier = "artifact-1"
-  name = "1. Power Rail Splitter & Ripple Filter"
-  title = "Artifact 1: Power Supply Rail Splitter"
-  url = "/posts/artifact-1-rail-splitter/"
-  parent = "artifacts-dropdown"
-  weight = 2
-
-[[Menus.main]]
-  identifier = "artifact-2"
-  name = "2. Dual Op-Amp Bandpass Filter"
-  title = "Artifact 2: Dual Op-Amp Bandpass Filter"
-  url = "/posts/spice-simulation-lab/"
-  parent = "artifacts-dropdown"
+  identifier = "education-link"
+  name = "Education"
+  title = "Education & Certifications"
+  url = "/#education"
   weight = 3
 
 [[Menus.main]]
-  identifier = "artifact-3"
-  name = "3. Light-Following Robot Filter"
-  title = "Artifact 3: Single-Supply Robot Filter"
-  url = "/posts/second-artifact/"
-  parent = "artifacts-dropdown"
+  identifier = "homelab-link"
+  name = "Homelab"
+  title = "Security & K3s Homelab Architecture"
+  url = "/#homelab"
   weight = 4
 
 [[Menus.main]]
-  identifier = "artifact-4"
-  name = "4. Netlist Verification & Revision"
-  title = "Artifact 4: NGspice Netlist Verification"
-  url = "/posts/artifact-4-netlist-verification/"
-  parent = "artifacts-dropdown"
+  identifier = "toc-dropdown"
+  name = "Table of Contents"
+  title = "Table of Contents"
   weight = 5
 
 [[Menus.main]]
-  identifier = "homelab-iac"
-  name = "Homelab IaC"
-  title = "Enterprise Security & K3s Homelab Architecture"
+  identifier = "toc-intro"
+  name = "1. Introduction & Target Role"
+  url = "/#about"
+  parent = "toc-dropdown"
+  weight = 1
+
+[[Menus.main]]
+  identifier = "toc-exp"
+  name = "2. Experience & Education"
+  url = "/#experience"
+  parent = "toc-dropdown"
+  weight = 2
+
+[[Menus.main]]
+  identifier = "toc-homelab"
+  name = "3. Security & K3s Homelab (IaC)"
   url = "/posts/homelab-infrastructure-iac/"
+  parent = "toc-dropdown"
   weight = 3
 
 [[Menus.main]]
-  identifier = "design-journey"
-  name = "Revision & Journey"
-  title = "Evidence of Revision & Design Journey"
-  url = "/#design-journey"
+  identifier = "toc-artifacts"
+  name = "4. EC EN 340 Artifacts (All 4)"
+  url = "/#projects"
+  parent = "toc-dropdown"
   weight = 4
 
 [[Menus.main]]
-  identifier = "byu-aims"
-  name = "BYU Aims"
-  title = "Connection to BYU Aims"
-  url = "/#byu-aims"
+  identifier = "toc-journey"
+  name = "5. Revisions & Design Journey"
+  url = "/#design-journey"
+  parent = "toc-dropdown"
   weight = 5
 
 [[Menus.main]]
-  identifier = "master-portfolio"
-  name = "Full Portfolio & TOC"
-  title = "Master Portfolio Page with Sidebar TOC"
-  url = "/portfolio-overview/"
+  identifier = "toc-aims"
+  name = "6. BYU Aims Connection"
+  url = "/#byu-aims"
+  parent = "toc-dropdown"
+  weight = 6
+
+[[Menus.main]]
+  identifier = "contact-link"
+  name = "Contact"
+  title = "Contact & Connect"
+  url = "/#contact"
   weight = 6
 
 [params]
@@ -119,18 +122,19 @@ enableRobotsTXT = true
     align = "ms-auto"
     brandName = "Landon Wilmott"
     disableSearch = false
-    searchPlaceholder = "Search portfolio..."
-    enableSeparator = true
+    searchPlaceholder = "Search..."
+    enableSeparator = false
     [params.navbar.stickyNavBar]
       enable = true
       showOnScrollUp = false
     [params.navbar.menus]
-      disableAbout = false
-      disableExperience = false
-      disableEducation = false
+      # Disable verbose auto-generated section names so our clean Menus.main controls the navbar
+      disableAbout = true
+      disableExperience = true
+      disableEducation = true
       disableProjects = true
       disableAchievements = true
-      disableContact = false
+      disableContact = true
 
   [params.hero]
     enable = true
@@ -143,8 +147,8 @@ enableRobotsTXT = true
       enable = true
     [params.hero.button]
       enable = true
-      name = "Open Complete Portfolio & TOC"
-      url = "/portfolio-overview/"
+      name = "View Experience & Resume ↓"
+      url = "#experience"
       download = false
       newPage = false
     [[params.hero.socialLinks.fontAwesomeIcons]]
@@ -168,7 +172,7 @@ enableRobotsTXT = true
     content = """
 I am a **Computer Engineering** student at **Brigham Young University (GPA: 3.88)** with a minor in **Cybersecurity**, currently serving as **Endpoint Engineering and Security Manager** for BYU Life Sciences IT, where I manage a team of 8 student technicians and track/remediate vulnerabilities across **1,200+ organizational endpoints**.
 
-I specialize in building resilient, **security-first infrastructure**—from physical-layer analog/digital hardware design (**EC EN 340**) up to automated Linux server provisioning, **Proxmox LXC virtualization**, **3-node K3s Kubernetes clusters**, **Longhorn distributed storage**, and **Ansible Infrastructure as Code (IaC)**. This portfolio showcases **four selected EC EN 340 circuit design artifacts**, **evidence of revision and my semester Design Journey**, a connection to the **[Aims of a BYU Education](https://aims.byu.edu/)**, and an employer-facing look at my **[Security & K3s Homelab Architecture](/posts/homelab-infrastructure-iac/)**.
+I specialize in building resilient, **security-first infrastructure**—from automated Linux server provisioning, **Proxmox LXC virtualization**, **3-node K3s Kubernetes clusters**, **Longhorn distributed storage**, and **Ansible Infrastructure as Code (IaC)** down to physical-layer analog/digital hardware design (**EC EN 340**).
 """
     [params.about.skills]
       enable = true
@@ -181,6 +185,117 @@ I specialize in building resilient, **security-first infrastructure**—from phy
         "**Languages & OS:** C, C++, Python, Java, Bash • Linux (Ubuntu Server, Fedora, Kali), Windows, macOS",
         "**Hardware & Circuit Design:** NGspice Simulation, Cascaded Active Filters, Virtual-Ground Op-Amps"
       ]
+
+  [params.experience]
+    enable = true
+    title = "Professional & Leadership Experience"
+
+    [[params.experience.items]]
+      company = "Life Sciences IT (BYU)"
+      companyUrl = "https://www.byu.edu"
+      [[params.experience.items.jobs]]
+        name = "Endpoint Engineering and Security Manager"
+        date = "Aug 2026 - Present"
+        info = { content = "Leading endpoint security, vulnerability remediation across 1,200+ systems, and managing 8 student technicians" }
+        content = """
+- Directly manage and mentor a team of **8 student technicians**, taking ownership of operational documentation and standardizing engineering support procedures.
+- Track, prioritize, and resolve security vulnerabilities across an enterprise environment of **over 1,200 endpoints**.
+"""
+      [[params.experience.items.jobs]]
+        name = "IT Specialist"
+        date = "Aug 2025 - Aug 2026"
+        info = { content = "Reduced endpoint vulnerability exposure by 20% and boosted ticket closure rate by 10%" }
+        content = """
+- Maintained security compliance for **200+ network endpoints**, successfully **reducing organizational vulnerability exposure by 20%**.
+- Provided remote technical support and advanced troubleshooting for Windows and macOS systems, contributing to a **10% increase in the team's average ticket closure rate**.
+"""
+
+    [[params.experience.items]]
+      company = "Homelab Infrastructure (IaC)"
+      companyUrl = "/posts/homelab-infrastructure-iac/"
+      [[params.experience.items.jobs]]
+        name = "Security Infrastructure & Kubernetes Architect (Personal Lab)"
+        date = "Ongoing"
+        info = { content = "Proxmox VE, 3-Node K3s Cluster, Ansible Security Hardening, CrowdSec IPS, Longhorn + Cloudflare R2" }
+        content = """
+- Architected a **Proxmox VE** virtual server environment and a **3-node K3s Kubernetes cluster** (`i5-server`, `lenovo-server`, `pi-server`), migrating heavy VMs to lightweight **LXC containers** to **reduce compute/memory consumption by over 50%**.
+- Engineered **Ansible** playbooks (`deploy_crowdsec_agents.yml`, `harden_all.yml`) to automate **CrowdSec LAPI** distributed intrusion prevention, default-deny **UFW** firewall rules, **SSH `ed25519` lockdown**, and **Fail2Ban** across Linux hosts.
+- Deployed **Longhorn** distributed block storage with automated 2:00 AM daily offsite disaster-recovery backups to **Cloudflare R2**, plus **Traefik ACME DNS-01 TLS** and **Cloudflare Tunnels**.
+- Developed a custom **C++ daemon** to poll Proxmox REST API health telemetry and route automated alerts to a **Discord webhook**.
+"""
+
+    [[params.experience.items]]
+      company = "Volunteer Service"
+      companyUrl = "https://www.churchofjesuschrist.org"
+      [[params.experience.items.jobs]]
+        name = "Full-Time Missionary — Papeete, Tahiti"
+        date = "Sep 2022 - Oct 2024"
+        info = { content = "Two-year full-time volunteer service in Papeete, Tahiti" }
+        content = """
+- Dedicated two years of full-time volunteer service in **Papeete, Tahiti** for The Church of Jesus Christ of Latter-day Saints.
+- Developed strong cross-cultural communication, leadership, mentoring, and community service skills in a dynamic international environment.
+"""
+
+    [[params.experience.items]]
+      company = "Bonnell Aluminum"
+      companyUrl = "https://bonnellaluminum.com"
+      [[params.experience.items.jobs]]
+        name = "Operator Level 1 — Clearfield, UT"
+        date = "May 2021 - Aug 2022"
+        info = { content = "Industrial quality control and operational safety" }
+        content = """
+- Maintained strict quality control and adherence to safety protocols in a high-demand industrial production environment.
+- Collaborated with floor teams to meet production targets while maintaining zero-compromise operational safety standards.
+"""
+
+  [params.education]
+    enable = true
+    title = "Education & Industry Certifications"
+    index = true
+    [[params.education.items]]
+      title = "B.S. in Computer Engineering (Minor in Cybersecurity)"
+      date = "Sep 2025 - Apr 2028"
+      GPA = "3.88 / 4.00"
+      content = """
+**Relevant Coursework & Focus Areas:**
+- **EC EN 340 (Electronic Circuit Design 1):** Op-Amp Active Filters, Virtual Ground Biasing, Power Decoupling, Diode/Transistor Circuits, and NGspice Simulation.
+- **Cybersecurity & Infrastructure Engineering:** Vulnerability Management, Network Virtualization, Linux Hardening, Infrastructure as Code (Ansible/K3s), and Systems Administration.
+- **BYU Aims Integration:** Uniting *Intellectually Enlarging* engineering theory with practical hardware and security stewardship ([aims.byu.edu](https://aims.byu.edu/)).
+"""
+      [params.education.items.school]
+        name = "Brigham Young University (Provo, UT)"
+        url = "https://www.byu.edu"
+      [params.education.items.featuredLink]
+        enable = true
+        name = "Jump to EC EN 340 Artifacts ↓"
+        url = "#projects"
+
+    [[params.education.items]]
+      title = "CompTIA Security+, Network+, and A+ Certifications"
+      date = "Certified"
+      content = """
+Hold the full **CompTIA Secure Infrastructure Specialist** stack:
+- **CompTIA Security+:** Threat detection, zero-trust architecture, access control, secrets management, and vulnerability mitigation.
+- **CompTIA Network+:** TCP/IP, VLANs, DNS/DHCP, HTTP/HTTPS, SSL/TLS, VPNs (Tailscale/WireGuard), and OSI layer troubleshooting.
+- **CompTIA A+:** Enterprise Windows/Linux/macOS administration, hardware diagnostics, and endpoint fleet management.
+"""
+      [params.education.items.school]
+        name = "CompTIA Certified Professional"
+        url = "https://www.comptia.org"
+      [params.education.items.featuredLink]
+        enable = false
+
+    [[params.education.items]]
+      title = "Associate of Science — General Studies"
+      date = "Aug 2019 - May 2023"
+      content = """
+Completed foundational mathematics, sciences, and general education degree requirements prior to transferring to Brigham Young University's Computer Engineering program.
+"""
+      [params.education.items.school]
+        name = "Weber State University (Ogden, UT)"
+        url = "https://www.weber.edu"
+      [params.education.items.featuredLink]
+        enable = false
 
   [params.projects]
     enable = true
@@ -242,109 +357,6 @@ I specialize in building resilient, **security-first infrastructure**—from phy
       [params.projects.items.featured]
         name = "Read Full Artifact 4 →"
         link = "/posts/artifact-4-netlist-verification/"
-
-  [params.experience]
-    enable = true
-    title = "Professional & Leadership Experience"
-
-    [[params.experience.items]]
-      company = "Life Sciences IT (BYU)"
-      companyUrl = "https://www.byu.edu"
-      [[params.experience.items.jobs]]
-        name = "Endpoint Engineering and Security Manager"
-        date = "Aug 2026 - Present"
-        info = { content = "Leading endpoint security, vulnerability remediation across 1,200+ systems, and managing 8 student technicians" }
-        content = """
-- Directly manage and mentor a team of **8 student technicians**, taking ownership of operational documentation and standardizing engineering support procedures.
-- Track, prioritize, and resolve security vulnerabilities across an enterprise environment of **over 1,200 endpoints**.
-"""
-      [[params.experience.items.jobs]]
-        name = "IT Specialist"
-        date = "Aug 2025 - Aug 2026"
-        info = { content = "Reduced endpoint vulnerability exposure by 20% and boosted ticket closure rate by 10%" }
-        content = """
-- Maintained security compliance for **200+ network endpoints**, successfully **reducing organizational vulnerability exposure by 20%**.
-- Provided remote technical support and advanced troubleshooting for Windows and macOS systems, contributing to a **10% increase in the team's average ticket closure rate**.
-"""
-
-    [[params.experience.items]]
-      company = "Homelab Infrastructure (IaC)"
-      companyUrl = "/posts/homelab-infrastructure-iac/"
-      [[params.experience.items.jobs]]
-        name = "Security Infrastructure & Kubernetes Architect (Personal Lab)"
-        date = "Ongoing"
-        info = { content = "Proxmox VE, 3-Node K3s Cluster, Ansible Security Hardening, CrowdSec IPS, Longhorn + Cloudflare R2" }
-        content = """
-- Architected a **Proxmox VE** virtual server environment and a **3-node K3s Kubernetes cluster** (`i5-server`, `lenovo-server`, `pi-server`), migrating heavy VMs to lightweight **LXC containers** to **reduce compute/memory consumption by over 50%**.
-- Engineered **Ansible** playbooks (`deploy_crowdsec_agents.yml`, `harden_all.yml`) to automate **CrowdSec LAPI** distributed intrusion prevention, default-deny **UFW** firewall rules, **SSH `ed25519` lockdown**, and **Fail2Ban** across Linux hosts.
-- Deployed **Longhorn** distributed block storage with automated 2:00 AM daily offsite disaster-recovery backups to **Cloudflare R2**, plus **Traefik ACME DNS-01 TLS** and **Cloudflare Tunnels**.
-- Developed a custom **C++ daemon** to poll Proxmox REST API health telemetry and route automated alerts to a **Discord webhook**.
-"""
-
-    [[params.experience.items]]
-      company = "Volunteer & Production"
-      companyUrl = "https://www.churchofjesuschrist.org"
-      [[params.experience.items.jobs]]
-        name = "Full-Time Volunteer Representative (Papeete, Tahiti)"
-        date = "Sep 2022 - Oct 2024"
-        content = """
-- Served for two years in **Papeete, Tahiti**, developing cross-cultural leadership, French/Tahitian communication, and team training skills.
-"""
-      [[params.experience.items.jobs]]
-        name = "Operator Level 1 — Bonnell (Clearfield, UT)"
-        date = "May 2021 - Aug 2022"
-        content = """
-- Maintained strict quality control and adherence to safety protocols in a high-demand industrial production environment.
-"""
-
-  [params.education]
-    enable = true
-    title = "Education & Industry Certifications"
-    index = true
-    [[params.education.items]]
-      title = "B.S. in Computer Engineering (Minor in Cybersecurity)"
-      date = "Sep 2025 - Apr 2028"
-      GPA = "3.88 / 4.00"
-      content = """
-**Relevant Coursework & Focus Areas:**
-- **EC EN 340 (Electronic Circuit Design 1):** Op-Amp Active Filters, Virtual Ground Biasing, Power Decoupling, Diode/Transistor Circuits, and NGspice Simulation.
-- **Cybersecurity & Infrastructure Engineering:** Vulnerability Management, Network Virtualization, Linux Hardening, Infrastructure as Code (Ansible/K3s), and Systems Administration.
-- **BYU Aims Integration:** Uniting *Intellectually Enlarging* engineering theory with practical hardware and security stewardship ([aims.byu.edu](https://aims.byu.edu/)).
-"""
-      [params.education.items.school]
-        name = "Brigham Young University (Provo, UT)"
-        url = "https://www.byu.edu"
-      [params.education.items.featuredLink]
-        enable = true
-        name = "View EC EN 340 & Homelab Portfolio Overview"
-        url = "/portfolio-overview/"
-
-    [[params.education.items]]
-      title = "CompTIA Security+, Network+, and A+ Certifications"
-      date = "Certified"
-      content = """
-Hold the full **CompTIA Secure Infrastructure Specialist** stack:
-- **CompTIA Security+:** Threat detection, zero-trust architecture, access control, secrets management, and vulnerability mitigation.
-- **CompTIA Network+:** TCP/IP, VLANs, DNS/DHCP, HTTP/HTTPS, SSL/TLS, VPNs (Tailscale/WireGuard), and OSI layer troubleshooting.
-- **CompTIA A+:** Enterprise Windows/Linux/macOS administration, hardware diagnostics, and endpoint fleet management.
-"""
-      [params.education.items.school]
-        name = "CompTIA Certified Professional"
-        url = "https://www.comptia.org"
-      [params.education.items.featuredLink]
-        enable = false
-
-    [[params.education.items]]
-      title = "Associate of Science — General Studies"
-      date = "Aug 2019 - May 2023"
-      content = """
-Completed foundational mathematics, sciences, and general education degree requirements prior to transferring to Brigham Young University's Computer Engineering program.
-"""
-      [params.education.items.school]
-        name = "Weber State University (Ogden, UT)"
-        url = "https://www.weber.edu"
-      [params.education.items.featuredLink]
-        enable = false
 
   [params.achievements]
     enable = false

@@ -116,26 +116,26 @@
 <style>
    
   #about ul {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
-    gap: 6px 20px !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 8px 24px !important;
   }
-  .toc-card, .journey-card {
+  .journey-card {
     background-color: var(--secondary-color) !important;
     border-radius: 1rem;
-    box-shadow: 0px 8px 40px rgb(15 80 100 / 12%);
-    border: 1px solid rgba(100, 149, 237, 0.25);
+    box-shadow: 0px 8px 32px rgb(15 80 100 / 10%);
+    border: 1px solid rgba(100, 149, 237, 0.2);
   }
-  .toc-card a, .journey-card a {
+  .journey-card a {
     color: var(--text-link-color) !important;
     text-decoration: none;
   }
-  .toc-card a:hover, .journey-card a:hover {
+  .journey-card a:hover {
     text-decoration: underline;
   }
   .target-role-banner {
     border-left: 4px solid var(--primary-color);
     background-color: var(--secondary-color);
-    padding: 1rem 1.25rem;
+    padding: 0.9rem 1.25rem;
     border-radius: 0.5rem;
     margin-bottom: 1.25rem;
   }
@@ -153,18 +153,47 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
   #projects .card:hover .card-img-top {
-    transform: scale(1.04) !important;
+    transform: scale(1.03) !important;
   }
   .rubric-tag {
     display: inline-block;
     padding: 0.2rem 0.65rem;
     border-radius: 999px;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 600;
     background-color: var(--background-color);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
     margin-bottom: 0.5rem;
+  }
+  .toc-dropdown-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+  }
+  .toc-dropdown-bar .dropdown-menu {
+    min-width: 280px;
+    padding: 0.5rem 0;
+    background-color: var(--secondary-color);
+    border: 1px solid rgba(100, 149, 237, 0.3);
+  }
+  .toc-dropdown-bar .dropdown-item {
+    color: var(--text-color) !important;
+    padding: 0.45rem 1.25rem;
+    font-size: 0.92rem;
+  }
+  .toc-dropdown-bar .dropdown-item:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color) !important;
+  }
+  .toc-dropdown-bar .dropdown-header {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary-color);
+    font-weight: 700;
+    padding: 0.4rem 1.25rem 0.2rem;
   }
 </style>
 
@@ -245,7 +274,7 @@ Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio
 
             
                 <div>
-                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Search portfolio...'
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Search...'
                         aria-label="Search" oninput="searchOnChange(event)">
                 </div>
             
@@ -264,35 +293,15 @@ Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio
                     
                         <li class="nav-item navbar-text d-block d-md-none">
                             <div class="nav-link">
-                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Search portfolio...' aria-label="Search" oninput="searchOnChange(event)">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Search...' aria-label="Search" oninput="searchOnChange(event)">
                             </div>
                         </li>
                     
 
                     
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/#about" aria-label="about">
-                            Professional Introduction &amp; Target Role
-                        </a>
-                    </li>
-                    
 
                     
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/#experience"
-                            aria-label="experience">
-                            Professional &amp; Leadership Experience
-                        </a>
-                    </li>
-                    
 
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/#education"
-                            aria-label="education">
-                            Education &amp; Industry Certifications
-                        </a>
-                    </li>
                     
 
                     
@@ -300,17 +309,7 @@ Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio
                     
 
                     
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/#contact"
-                            aria-label="contact">
-                            Contact &amp; Connect
-                        </a>
-                    </li>
-                    
 
-                    
-                        <li class="nav-item navbar-text d-none d-lg-block d-xl-block"><div class="nav-link nav-link-sep"></div></li>
-                        <div class="dropdown-divider"></div>
                     
 
                     
@@ -318,9 +317,39 @@ Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio
                     
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/#toc" title="Portfolio Table of Contents">
+                        <a class="nav-link" href="/#about" title="Professional Introduction &amp; Target Role">
                             
-                            TOC
+                            About
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#experience" title="Professional &amp; Leadership Experience">
+                            
+                            Experience
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#education" title="Education &amp; Certifications">
+                            
+                            Education
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#homelab" title="Security &amp; K3s Homelab Architecture">
+                            
+                            Homelab
                         </a>
                     </li>
                     
@@ -329,34 +358,39 @@ Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio
                     
                     <li class="nav-item navbar-text dropdown">
                         <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Selected EC EN 340 Artifacts">
-                            EC EN 340 Artifacts
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Table of Contents">
+                            Table of Contents
                         </a>
                         <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
                             
+                            <a class="dropdown-item text-center nav-link" href="/#about"
+                                title="">
+                                1. Introduction &amp; Target Role
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#experience"
+                                title="">
+                                2. Experience &amp; Education
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/posts/homelab-infrastructure-iac/"
+                                title="">
+                                3. Security &amp; K3s Homelab (IaC)
+                            </a>
+                            
                             <a class="dropdown-item text-center nav-link" href="/#projects"
-                                title="All 4 Artifacts on Homepage">
-                                All 4 Artifacts (Overview)
+                                title="">
+                                4. EC EN 340 Artifacts (All 4)
                             </a>
                             
-                            <a class="dropdown-item text-center nav-link" href="/posts/artifact-1-rail-splitter/"
-                                title="Artifact 1: Power Supply Rail Splitter">
-                                1. Power Rail Splitter &amp; Ripple Filter
+                            <a class="dropdown-item text-center nav-link" href="/#design-journey"
+                                title="">
+                                5. Revisions &amp; Design Journey
                             </a>
                             
-                            <a class="dropdown-item text-center nav-link" href="/posts/spice-simulation-lab/"
-                                title="Artifact 2: Dual Op-Amp Bandpass Filter">
-                                2. Dual Op-Amp Bandpass Filter
-                            </a>
-                            
-                            <a class="dropdown-item text-center nav-link" href="/posts/second-artifact/"
-                                title="Artifact 3: Single-Supply Robot Filter">
-                                3. Light-Following Robot Filter
-                            </a>
-                            
-                            <a class="dropdown-item text-center nav-link" href="/posts/artifact-4-netlist-verification/"
-                                title="Artifact 4: NGspice Netlist Verification">
-                                4. Netlist Verification &amp; Revision
+                            <a class="dropdown-item text-center nav-link" href="/#byu-aims"
+                                title="">
+                                6. BYU Aims Connection
                             </a>
                             
                         </div>
@@ -366,39 +400,9 @@ Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio
                     
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/posts/homelab-infrastructure-iac/" title="Enterprise Security &amp; K3s Homelab Architecture">
+                        <a class="nav-link" href="/#contact" title="Contact &amp; Connect">
                             
-                            Homelab IaC
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/#design-journey" title="Evidence of Revision &amp; Design Journey">
-                            
-                            Revision &amp; Journey
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/#byu-aims" title="Connection to BYU Aims">
-                            
-                            BYU Aims
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/portfolio-overview/" title="Master Portfolio Page with Sidebar TOC">
-                            
-                            Full Portfolio &amp; TOC
+                            Contact
                         </a>
                     </li>
                     
@@ -452,12 +456,12 @@ Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio
                 <div class="row align-items-center">
                     <div class="col-auto h-100">
                         
-                        <a href="/portfolio-overview/" class="btn me-2">
-                            Open Complete Portfolio &amp; TOC
+                        <a href="#experience" class="btn me-2">
+                            View Experience &amp; Resume ↓
                         </a>
                         
                         <a href="#projects" class="btn">
-                            View 4 EC EN 340 Artifacts ↓
+                            EC EN 340 Artifacts ↓
                         </a>
                     </div>
                     <div class="col-auto px-0 h-100"><span>
@@ -518,48 +522,29 @@ Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio
     </div>
 </section>
 
-<section id="toc" class="py-4">
-  <div class="container">
-    <div class="toc-card p-4 p-md-5">
-      <div class="row align-items-center">
-        <div class="col-lg-5 mb-4 mb-lg-0">
-          <span class="rubric-tag">Portfolio Navigation</span>
-          <h3 class="mb-2">Table of Contents &amp; Quick Guide</h3>
-          <p class="secondary-font mb-3">
-            Welcome to my revised <strong>EC EN 340 &amp; Computer Engineering Portfolio</strong>. Use this organized directory—or the sticky navigation bar above—to jump directly to any section on this page or open the full standalone write-ups.
-          </p>
-          <a class="btn btn-sm btn-outline-primary" href="/portfolio-overview/">
-            Open Master Portfolio Page (with Sidebar TOC) →
-          </a>
-        </div>
-        <div class="col-lg-7">
-          <div class="row g-3">
-            <div class="col-md-6">
-              <h6 class="fw-bold mb-2"><i class="fas fa-compass me-2"></i>Core Portfolio Sections</h6>
-              <ol class="mb-0 ps-3 secondary-font">
-                <li class="mb-1"><a href="#about">Professional Introduction &amp; Target Role</a></li>
-                <li class="mb-1"><a href="#projects">Four Selected EC EN 340 Artifacts</a></li>
-                <li class="mb-1"><a href="#design-journey">Evidence of Revision &amp; Design Journey</a></li>
-                <li class="mb-1"><a href="#byu-aims">Connection to BYU Aims (aims.byu.edu)</a></li>
-                <li class="mb-1"><a href="#homelab">Security &amp; K3s Homelab Architecture (IaC)</a></li>
-                <li class="mb-1"><a href="#experience">Resume: Experience, Education &amp; Certs</a></li>
-              </ol>
-            </div>
-            <div class="col-md-6">
-              <h6 class="fw-bold mb-2"><i class="fas fa-microchip me-2"></i>EC EN 340 Artifact Write-Ups</h6>
-              <ol class="mb-0 ps-3 secondary-font">
-                <li class="mb-1"><a href="/posts/artifact-1-rail-splitter/">Artifact 1: Rail Splitter &amp; Ripple Filter</a></li>
-                <li class="mb-1"><a href="/posts/spice-simulation-lab/">Artifact 2: Dual Op-Amp Bandpass Filter</a></li>
-                <li class="mb-1"><a href="/posts/second-artifact/">Artifact 3: Single-Supply Robot Filter</a></li>
-                <li class="mb-1"><a href="/posts/artifact-4-netlist-verification/">Artifact 4: Netlist Debugging &amp; Multi-Pole Revision</a></li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div id="toc" class="container toc-dropdown-bar">
+  <div class="dropdown">
+    <button class="btn btn-outline-primary dropdown-toggle px-4 py-2 rounded-pill shadow-sm" type="button" id="pageTocDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-list-ul me-2"></i>Table of Contents
+    </button>
+    <ul class="dropdown-menu shadow-lg rounded-3" aria-labelledby="pageTocDropdown">
+      <li><h6 class="dropdown-header">Resume &amp; Background</h6></li>
+      <li><a class="dropdown-item" href="#about">1. Introduction &amp; Target Role</a></li>
+      <li><a class="dropdown-item" href="#experience">2. Professional &amp; Leadership Experience</a></li>
+      <li><a class="dropdown-item" href="#education">3. Education &amp; Certifications</a></li>
+      <li><a class="dropdown-item" href="#homelab">4. Security &amp; K3s Homelab (IaC)</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><h6 class="dropdown-header">EC EN 340 Portfolio</h6></li>
+      <li><a class="dropdown-item" href="#projects">5. Selected EC EN 340 Artifacts (All 4)</a></li>
+      <li><a class="dropdown-item ps-4 small" href="/posts/artifact-1-rail-splitter/">• Artifact 1: Rail Splitter &amp; Ripple Filter</a></li>
+      <li><a class="dropdown-item ps-4 small" href="/posts/spice-simulation-lab/">• Artifact 2: Dual Op-Amp Bandpass Filter</a></li>
+      <li><a class="dropdown-item ps-4 small" href="/posts/second-artifact/">• Artifact 3: Light-Following Robot Filter</a></li>
+      <li><a class="dropdown-item ps-4 small" href="/posts/artifact-4-netlist-verification/">• Artifact 4: Netlist Verification &amp; Revision</a></li>
+      <li><a class="dropdown-item" href="#design-journey">6. Evidence of Revision &amp; Design Journey</a></li>
+      <li><a class="dropdown-item" href="#byu-aims">7. Connection to BYU Aims</a></li>
+    </ul>
   </div>
-</section>
+</div>
 <section id="about" class="py-4 py-sm-5">
     <div class="container bg-transparent">
         <h3 class="text-center bg-transparent">Professional Introduction &amp; Target Role</h3>
@@ -578,7 +563,7 @@ Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio
                 </div>
                 
                 <p>I am a <strong>Computer Engineering</strong> student at <strong>Brigham Young University (GPA: 3.88)</strong> with a minor in <strong>Cybersecurity</strong>, currently serving as <strong>Endpoint Engineering and Security Manager</strong> for BYU Life Sciences IT, where I manage a team of 8 student technicians and track/remediate vulnerabilities across <strong>1,200+ organizational endpoints</strong>.</p>
-<p>I specialize in building resilient, <strong>security-first infrastructure</strong>—from physical-layer analog/digital hardware design (<strong>EC EN 340</strong>) up to automated Linux server provisioning, <strong>Proxmox LXC virtualization</strong>, <strong>3-node K3s Kubernetes clusters</strong>, <strong>Longhorn distributed storage</strong>, and <strong>Ansible Infrastructure as Code (IaC)</strong>. This portfolio showcases <strong>four selected EC EN 340 circuit design artifacts</strong>, <strong>evidence of revision and my semester Design Journey</strong>, a connection to the <strong><a href="https://aims.byu.edu/">Aims of a BYU Education</a></strong>, and an employer-facing look at my <strong><a href="/posts/homelab-infrastructure-iac/">Security &amp; K3s Homelab Architecture</a></strong>.</p>
+<p>I specialize in building resilient, <strong>security-first infrastructure</strong>—from automated Linux server provisioning, <strong>Proxmox LXC virtualization</strong>, <strong>3-node K3s Kubernetes clusters</strong>, <strong>Longhorn distributed storage</strong>, and <strong>Ansible Infrastructure as Code (IaC)</strong> down to physical-layer analog/digital hardware design (<strong>EC EN 340</strong>).</p>
 
 
                 
@@ -606,6 +591,544 @@ Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio
     </div>
 </section>
 
+<section id="experience" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Professional &amp; Leadership Experience</h3>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-8 py-5">
+                <div class="experience-container px-3 pt-2">
+                    <ul class="nav nav-pills mb-2 bg-transparent primary-font" id="pills-tab" role="tablist">
+                        
+                            
+                            
+                                
+                            
+                            <li class="nav-item px-1 bg-transparent" role="presentation">
+                                <div
+                                    class="nav-link active bg-transparent"
+                                    aria-selected="true"
+                                    role="tab"
+                                    data-bs-toggle="pill"
+                                    id='life-sciences-it-byu-aug-2026-present-tab'
+                                    data-bs-target='#pills-life-sciences-it-byu-aug-2026-present'
+                                    aria-controls='life-sciences-it-byu-aug-2026-present'
+                                >
+                                    Life Sciences IT (BYU)
+                                </div>
+                            </li>
+                        
+                            
+                            
+                                
+                            
+                            <li class="nav-item px-1 bg-transparent" role="presentation">
+                                <div
+                                    class="nav-link  bg-transparent"
+                                    aria-selected="true"
+                                    role="tab"
+                                    data-bs-toggle="pill"
+                                    id='homelab-infrastructure-iac-ongoing-tab'
+                                    data-bs-target='#pills-homelab-infrastructure-iac-ongoing'
+                                    aria-controls='homelab-infrastructure-iac-ongoing'
+                                >
+                                    Homelab Infrastructure (IaC)
+                                </div>
+                            </li>
+                        
+                            
+                            
+                                
+                            
+                            <li class="nav-item px-1 bg-transparent" role="presentation">
+                                <div
+                                    class="nav-link  bg-transparent"
+                                    aria-selected="true"
+                                    role="tab"
+                                    data-bs-toggle="pill"
+                                    id='volunteer-service-sep-2022-oct-2024-tab'
+                                    data-bs-target='#pills-volunteer-service-sep-2022-oct-2024'
+                                    aria-controls='volunteer-service-sep-2022-oct-2024'
+                                >
+                                    Volunteer Service
+                                </div>
+                            </li>
+                        
+                            
+                            
+                                
+                            
+                            <li class="nav-item px-1 bg-transparent" role="presentation">
+                                <div
+                                    class="nav-link  bg-transparent"
+                                    aria-selected="true"
+                                    role="tab"
+                                    data-bs-toggle="pill"
+                                    id='bonnell-aluminum-may-2021-aug-2022-tab'
+                                    data-bs-target='#pills-bonnell-aluminum-may-2021-aug-2022'
+                                    aria-controls='bonnell-aluminum-may-2021-aug-2022'
+                                >
+                                    Bonnell Aluminum
+                                </div>
+                            </li>
+                        
+                    </ul>
+
+                    <div class="tab-content pb-3 bg-transparent primary-font" id="pills-tabContent">
+                        
+                            
+                            
+                            
+                            
+                                
+                            
+                            <div
+                                class="tab-pane fade bg-transparent show active"
+                                role="tabpanel"
+                                id='pills-life-sciences-it-byu-aug-2026-present'
+                                aria-labelledby='life-sciences-it-byu-aug-2026-present-tab'
+                            >
+                                
+                                    <div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <span class="h4">Endpoint Engineering and Security Manager</span>
+                                                
+                                                
+                                                    <span class="p-2">
+                                                        <span
+                                                            data-bs-toggle="tooltip"
+                                                            data-bs-placement="top"
+                                                            data-bs-original-title=Leading&#32;endpoint&#32;security,&#32;vulnerability&#32;remediation&#32;across&#32;1,200&#43;&#32;systems,&#32;and&#32;managing&#32;8&#32;student&#32;technicians
+                                                        > 
+                                                            <i class="fas fa-info-circle fa-xs"></i>
+                                                        </span>
+                                                    </span>
+                                                
+                                                
+                                                
+                                                    <small>-</small>
+                                                    <a href="https://www.byu.edu" target="_blank">Life Sciences IT (BYU)</a>
+                                                
+                                            </div>
+                                            <div class="d-block">
+                                                <small>Aug 2026 - Present</small>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="pb-2 pb-3">
+                                            <ul>
+<li>Directly manage and mentor a team of <strong>8 student technicians</strong>, taking ownership of operational documentation and standardizing engineering support procedures.</li>
+<li>Track, prioritize, and resolve security vulnerabilities across an enterprise environment of <strong>over 1,200 endpoints</strong>.</li>
+</ul>
+
+                                        </div>
+                                    </div>
+                                
+                                    <div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <span class="h5">IT Specialist</span>
+                                                
+                                                
+                                                    <span class="p-2">
+                                                        <span
+                                                            data-bs-toggle="tooltip"
+                                                            data-bs-placement="top"
+                                                            data-bs-original-title=Reduced&#32;endpoint&#32;vulnerability&#32;exposure&#32;by&#32;20%&#32;and&#32;boosted&#32;ticket&#32;closure&#32;rate&#32;by&#32;10%
+                                                        > 
+                                                            <i class="fas fa-info-circle fa-xs"></i>
+                                                        </span>
+                                                    </span>
+                                                
+                                                
+                                                
+                                            </div>
+                                            <div class="d-block">
+                                                <small>Aug 2025 - Aug 2026</small>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="pb-2 pb-3">
+                                            <ul>
+<li>Maintained security compliance for <strong>200+ network endpoints</strong>, successfully <strong>reducing organizational vulnerability exposure by 20%</strong>.</li>
+<li>Provided remote technical support and advanced troubleshooting for Windows and macOS systems, contributing to a <strong>10% increase in the team&rsquo;s average ticket closure rate</strong>.</li>
+</ul>
+
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                        
+                        
+                            
+                            
+                            
+                            
+                                
+                            
+                            <div
+                                class="tab-pane fade bg-transparent "
+                                role="tabpanel"
+                                id='pills-homelab-infrastructure-iac-ongoing'
+                                aria-labelledby='homelab-infrastructure-iac-ongoing-tab'
+                            >
+                                
+                                    <div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <span class="h4">Security Infrastructure &amp; Kubernetes Architect (Personal Lab)</span>
+                                                
+                                                
+                                                    <span class="p-2">
+                                                        <span
+                                                            data-bs-toggle="tooltip"
+                                                            data-bs-placement="top"
+                                                            data-bs-original-title=Proxmox&#32;VE,&#32;3-Node&#32;K3s&#32;Cluster,&#32;Ansible&#32;Security&#32;Hardening,&#32;CrowdSec&#32;IPS,&#32;Longhorn&#32;&#43;&#32;Cloudflare&#32;R2
+                                                        > 
+                                                            <i class="fas fa-info-circle fa-xs"></i>
+                                                        </span>
+                                                    </span>
+                                                
+                                                
+                                                
+                                                    <small>-</small>
+                                                    <a href="/posts/homelab-infrastructure-iac/" target="_blank">Homelab Infrastructure (IaC)</a>
+                                                
+                                            </div>
+                                            <div class="d-block">
+                                                <small>Ongoing</small>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="pb-2 pb-3">
+                                            <ul>
+<li>Architected a <strong>Proxmox VE</strong> virtual server environment and a <strong>3-node K3s Kubernetes cluster</strong> (<code>i5-server</code>, <code>lenovo-server</code>, <code>pi-server</code>), migrating heavy VMs to lightweight <strong>LXC containers</strong> to <strong>reduce compute/memory consumption by over 50%</strong>.</li>
+<li>Engineered <strong>Ansible</strong> playbooks (<code>deploy_crowdsec_agents.yml</code>, <code>harden_all.yml</code>) to automate <strong>CrowdSec LAPI</strong> distributed intrusion prevention, default-deny <strong>UFW</strong> firewall rules, <strong>SSH <code>ed25519</code> lockdown</strong>, and <strong>Fail2Ban</strong> across Linux hosts.</li>
+<li>Deployed <strong>Longhorn</strong> distributed block storage with automated 2:00 AM daily offsite disaster-recovery backups to <strong>Cloudflare R2</strong>, plus <strong>Traefik ACME DNS-01 TLS</strong> and <strong>Cloudflare Tunnels</strong>.</li>
+<li>Developed a custom <strong>C++ daemon</strong> to poll Proxmox REST API health telemetry and route automated alerts to a <strong>Discord webhook</strong>.</li>
+</ul>
+
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                        
+                        
+                            
+                            
+                            
+                            
+                                
+                            
+                            <div
+                                class="tab-pane fade bg-transparent "
+                                role="tabpanel"
+                                id='pills-volunteer-service-sep-2022-oct-2024'
+                                aria-labelledby='volunteer-service-sep-2022-oct-2024-tab'
+                            >
+                                
+                                    <div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <span class="h4">Full-Time Missionary — Papeete, Tahiti</span>
+                                                
+                                                
+                                                    <span class="p-2">
+                                                        <span
+                                                            data-bs-toggle="tooltip"
+                                                            data-bs-placement="top"
+                                                            data-bs-original-title=Two-year&#32;full-time&#32;volunteer&#32;service&#32;in&#32;Papeete,&#32;Tahiti
+                                                        > 
+                                                            <i class="fas fa-info-circle fa-xs"></i>
+                                                        </span>
+                                                    </span>
+                                                
+                                                
+                                                
+                                                    <small>-</small>
+                                                    <a href="https://www.churchofjesuschrist.org" target="_blank">Volunteer Service</a>
+                                                
+                                            </div>
+                                            <div class="d-block">
+                                                <small>Sep 2022 - Oct 2024</small>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="pb-2 pb-3">
+                                            <ul>
+<li>Dedicated two years of full-time volunteer service in <strong>Papeete, Tahiti</strong> for The Church of Jesus Christ of Latter-day Saints.</li>
+<li>Developed strong cross-cultural communication, leadership, mentoring, and community service skills in a dynamic international environment.</li>
+</ul>
+
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                        
+                        
+                            
+                            
+                            
+                            
+                                
+                            
+                            <div
+                                class="tab-pane fade bg-transparent "
+                                role="tabpanel"
+                                id='pills-bonnell-aluminum-may-2021-aug-2022'
+                                aria-labelledby='bonnell-aluminum-may-2021-aug-2022-tab'
+                            >
+                                
+                                    <div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <span class="h4">Operator Level 1 — Clearfield, UT</span>
+                                                
+                                                
+                                                    <span class="p-2">
+                                                        <span
+                                                            data-bs-toggle="tooltip"
+                                                            data-bs-placement="top"
+                                                            data-bs-original-title=Industrial&#32;quality&#32;control&#32;and&#32;operational&#32;safety
+                                                        > 
+                                                            <i class="fas fa-info-circle fa-xs"></i>
+                                                        </span>
+                                                    </span>
+                                                
+                                                
+                                                
+                                                    <small>-</small>
+                                                    <a href="https://bonnellaluminum.com" target="_blank">Bonnell Aluminum</a>
+                                                
+                                            </div>
+                                            <div class="d-block">
+                                                <small>May 2021 - Aug 2022</small>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="pb-2 pb-3">
+                                            <ul>
+<li>Maintained strict quality control and adherence to safety protocols in a high-demand industrial production environment.</li>
+<li>Collaborated with floor teams to meet production targets while maintaining zero-compromise operational safety standards.</li>
+</ul>
+
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="education" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Education &amp; Industry Certifications</h3>
+        <div class="row justify-content-center py-5">
+            
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+                    <div class="col-md-1 text-center me-2 p-0 d-none d-md-block">
+                        <div class="py-2">
+                            <span class="index shadow-lg">
+                                1
+                            </span>
+                        </div>
+                    </div>
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>Sep 2025 - Apr 2028</small>
+                                </div>
+                                <h5 class="card-title">B.S. in Computer Engineering (Minor in Cybersecurity)</h5>
+                                
+                                
+                                <a href="https://www.byu.edu" target="_blank">
+                                    <h6>
+                                    Brigham Young University (Provo, UT)
+                                    </h6>
+                                </a>
+                                
+
+                                
+                                <div class="py-1">
+                                    GPA:
+                                    <i>
+                                        <small>3.88 / 4.00</small>
+                                    </i> 
+                                </div>
+                                
+                                <div class="py-1 education-content">
+                                    <p><strong>Relevant Coursework &amp; Focus Areas:</strong></p>
+<ul>
+<li><strong>EC EN 340 (Electronic Circuit Design 1):</strong> Op-Amp Active Filters, Virtual Ground Biasing, Power Decoupling, Diode/Transistor Circuits, and NGspice Simulation.</li>
+<li><strong>Cybersecurity &amp; Infrastructure Engineering:</strong> Vulnerability Management, Network Virtualization, Linux Hardening, Infrastructure as Code (Ansible/K3s), and Systems Administration.</li>
+<li><strong>BYU Aims Integration:</strong> Uniting <em>Intellectually Enlarging</em> engineering theory with practical hardware and security stewardship (<a href="https://aims.byu.edu/">aims.byu.edu</a>).</li>
+</ul>
+                                </div>
+
+                                
+                                <div class="py-1">
+                                    <a href="#projects" class="btn">
+                                        Jump to EC EN 340 Artifacts ↓
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+                    <div class="col-md-1 text-center me-2 p-0 d-none d-md-block">
+                        <div class="py-2">
+                            <span class="index shadow-lg">
+                                2
+                            </span>
+                        </div>
+                    </div>
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>Certified</small>
+                                </div>
+                                <h5 class="card-title">CompTIA Security&#43;, Network&#43;, and A&#43; Certifications</h5>
+                                
+                                
+                                <a href="https://www.comptia.org" target="_blank">
+                                    <h6>
+                                    CompTIA Certified Professional
+                                    </h6>
+                                </a>
+                                
+
+                                
+                                <div class="py-1 education-content">
+                                    <p>Hold the full <strong>CompTIA Secure Infrastructure Specialist</strong> stack:</p>
+<ul>
+<li><strong>CompTIA Security+:</strong> Threat detection, zero-trust architecture, access control, secrets management, and vulnerability mitigation.</li>
+<li><strong>CompTIA Network+:</strong> TCP/IP, VLANs, DNS/DHCP, HTTP/HTTPS, SSL/TLS, VPNs (Tailscale/WireGuard), and OSI layer troubleshooting.</li>
+<li><strong>CompTIA A+:</strong> Enterprise Windows/Linux/macOS administration, hardware diagnostics, and endpoint fleet management.</li>
+</ul>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+                    <div class="col-md-1 text-center me-2 p-0 d-none d-md-block">
+                        <div class="py-2">
+                            <span class="index shadow-lg">
+                                3
+                            </span>
+                        </div>
+                    </div>
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>Aug 2019 - May 2023</small>
+                                </div>
+                                <h5 class="card-title">Associate of Science — General Studies</h5>
+                                
+                                
+                                <a href="https://www.weber.edu" target="_blank">
+                                    <h6>
+                                    Weber State University (Ogden, UT)
+                                    </h6>
+                                </a>
+                                
+
+                                
+                                <div class="py-1 education-content">
+                                    Completed foundational mathematics, sciences, and general education degree requirements prior to transferring to Brigham Young University&rsquo;s Computer Engineering program.
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section id="homelab" class="py-5">
+  <div class="container">
+    <div class="text-center mb-2">
+      <span class="rubric-tag">Security Infrastructure &amp; DevSecOps Project</span>
+    </div>
+    <h3 class="text-center mb-2">Enterprise Virtualization, K3s Kubernetes &amp; Security Homelab (IaC)</h3>
+    <p class="text-center secondary-font mx-auto mb-4" style="max-width: 820px;">
+      Alongside my hardware and circuit engineering work in EC EN 340, I architected and maintain a multi-node <strong>Proxmox VE &amp; 3-Node K3s Kubernetes</strong> environment automated with <strong>Ansible Infrastructure as Code (IaC)</strong>, <strong>CrowdSec Distributed IPS</strong>, and <strong>Longhorn + Cloudflare R2</strong> disaster recovery.
+    </p>
+
+    <div class="row justify-content-center px-2 px-md-4">
+      <div class="col-12">
+        <div class="journey-card p-4 p-md-5">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <img src="/images/homelab_architecture.svg" class="img-fluid rounded-3 shadow-sm" alt="Enterprise Security and K3s Homelab Architecture">
+            </div>
+            <div class="col-lg-6">
+              <div class="pb-2">
+                <span class="badge bg-primary me-1 mb-1">Proxmox VE &amp; LXC</span>
+                <span class="badge bg-primary me-1 mb-1">3-Node K3s Kubernetes</span>
+                <span class="badge bg-primary me-1 mb-1">Ansible IaC</span>
+                <span class="badge bg-primary me-1 mb-1">CrowdSec IPS</span>
+                <span class="badge bg-primary me-1 mb-1">Longhorn + Cloudflare R2</span>
+                <span class="badge bg-primary me-1 mb-1">C++ Telemetry</span>
+              </div>
+              <h4 class="mt-2 mb-3">Production-Grade Security &amp; Infrastructure Highlights</h4>
+              <ul class="secondary-font ps-3 mb-4">
+                <li class="mb-2">
+                  <strong>Distributed Intrusion Prevention (CrowdSec LAPI + Bouncers):</strong> Wrote Ansible playbooks (<code>deploy_crowdsec_agents.yml</code>) using <code>delegate_to</code> orchestration to automatically register Linux nodes with a central CrowdSec LAPI "Brain" and deploy <code>iptables</code> firewall bouncers.
+                </li>
+                <li class="mb-2">
+                  <strong>Zero-Trust Host Hardening (<code>harden_all.yml</code>):</strong> Automated default-deny <strong>UFW</strong> firewalls dynamically populated from inventory port variables, <strong>SSH <code>ed25519</code> key-only lockdown</strong> restricted to a <strong>Tailscale</strong> management IP, and <strong>Fail2Ban</strong> jails.
+                </li>
+                <li class="mb-2">
+                  <strong>3-Node K3s Cluster, Longhorn Storage &amp; Cloud DR:</strong> Deployed high-availability workloads across 3 nodes (<code>i5-server</code>, <code>lenovo-server</code>, <code>pi-server</code>) with <strong>Longhorn</strong> distributed block storage and automated 2:00 AM daily backups to <strong>Cloudflare R2</strong>, plus <strong>Traefik ACME DNS-01 TLS</strong> and <strong>Cloudflare Tunnels</strong>.
+                </li>
+                <li class="mb-0">
+                  <strong>&gt;50% Resource Consolidation &amp; C++ Monitoring:</strong> Migrated heavy VMs to lightweight Proxmox LXC containers (cutting RAM/CPU usage by &gt;50%) and built a <strong>custom C++ daemon</strong> to poll Proxmox REST API health metrics and alert via Discord webhooks.
+                </li>
+              </ul>
+              <a class="btn btn-outline-primary btn-sm" href="/posts/homelab-infrastructure-iac/">
+                Explore Full Homelab Architecture &amp; Playbooks →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="projects" class="py-5">
     <div class="container">
         <div class="text-center mb-2">
@@ -894,486 +1417,6 @@ Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio
     </div>
   </div>
 </section>
-<section id="homelab" class="py-5">
-  <div class="container">
-    <div class="text-center mb-2">
-      <span class="rubric-tag">Security Infrastructure &amp; DevSecOps Project</span>
-    </div>
-    <h3 class="text-center mb-2">Enterprise Virtualization, K3s Kubernetes &amp; Security Homelab (IaC)</h3>
-    <p class="text-center secondary-font mx-auto mb-4" style="max-width: 820px;">
-      Alongside my hardware and circuit engineering work in EC EN 340, I architected and maintain a multi-node <strong>Proxmox VE &amp; 3-Node K3s Kubernetes</strong> environment automated with <strong>Ansible Infrastructure as Code (IaC)</strong>, <strong>CrowdSec Distributed IPS</strong>, and <strong>Longhorn + Cloudflare R2</strong> disaster recovery.
-    </p>
-
-    <div class="row justify-content-center px-2 px-md-4">
-      <div class="col-12">
-        <div class="journey-card p-4 p-md-5">
-          <div class="row align-items-center g-4">
-            <div class="col-lg-6">
-              <img src="/images/homelab_architecture.svg" class="img-fluid rounded-3 shadow-sm" alt="Enterprise Security and K3s Homelab Architecture">
-            </div>
-            <div class="col-lg-6">
-              <div class="pb-2">
-                <span class="badge bg-primary me-1 mb-1">Proxmox VE &amp; LXC</span>
-                <span class="badge bg-primary me-1 mb-1">3-Node K3s Kubernetes</span>
-                <span class="badge bg-primary me-1 mb-1">Ansible IaC</span>
-                <span class="badge bg-primary me-1 mb-1">CrowdSec IPS</span>
-                <span class="badge bg-primary me-1 mb-1">Longhorn + Cloudflare R2</span>
-                <span class="badge bg-primary me-1 mb-1">C++ Telemetry</span>
-              </div>
-              <h4 class="mt-2 mb-3">Production-Grade Security &amp; Infrastructure Highlights</h4>
-              <ul class="secondary-font ps-3 mb-4">
-                <li class="mb-2">
-                  <strong>Distributed Intrusion Prevention (CrowdSec LAPI + Bouncers):</strong> Wrote Ansible playbooks (<code>deploy_crowdsec_agents.yml</code>) using <code>delegate_to</code> orchestration to automatically register Linux nodes with a central CrowdSec LAPI "Brain" and deploy <code>iptables</code> firewall bouncers.
-                </li>
-                <li class="mb-2">
-                  <strong>Zero-Trust Host Hardening (<code>harden_all.yml</code>):</strong> Automated default-deny <strong>UFW</strong> firewalls dynamically populated from inventory port variables, <strong>SSH <code>ed25519</code> key-only lockdown</strong> restricted to a <strong>Tailscale</strong> management IP, and <strong>Fail2Ban</strong> jails.
-                </li>
-                <li class="mb-2">
-                  <strong>3-Node K3s Cluster, Longhorn Storage &amp; Cloud DR:</strong> Deployed high-availability workloads across 3 nodes (<code>i5-server</code>, <code>lenovo-server</code>, <code>pi-server</code>) with <strong>Longhorn</strong> distributed block storage and automated 2:00 AM daily backups to <strong>Cloudflare R2</strong>, plus <strong>Traefik ACME DNS-01 TLS</strong> and <strong>Cloudflare Tunnels</strong>.
-                </li>
-                <li class="mb-0">
-                  <strong>&gt;50% Resource Consolidation &amp; C++ Monitoring:</strong> Migrated heavy VMs to lightweight Proxmox LXC containers (cutting RAM/CPU usage by &gt;50%) and built a <strong>custom C++ daemon</strong> to poll Proxmox REST API health metrics and alert via Discord webhooks.
-                </li>
-              </ul>
-              <a class="btn btn-outline-primary btn-sm" href="/posts/homelab-infrastructure-iac/">
-                Explore Full Homelab Architecture &amp; Playbooks →
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="experience" class="py-5">
-    <div class="container">
-        <h3 class="text-center">Professional &amp; Leadership Experience</h3>
-        <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-8 col-lg-8 py-5">
-                <div class="experience-container px-3 pt-2">
-                    <ul class="nav nav-pills mb-2 bg-transparent primary-font" id="pills-tab" role="tablist">
-                        
-                            
-                            
-                                
-                            
-                            <li class="nav-item px-1 bg-transparent" role="presentation">
-                                <div
-                                    class="nav-link active bg-transparent"
-                                    aria-selected="true"
-                                    role="tab"
-                                    data-bs-toggle="pill"
-                                    id='life-sciences-it-byu-aug-2026-present-tab'
-                                    data-bs-target='#pills-life-sciences-it-byu-aug-2026-present'
-                                    aria-controls='life-sciences-it-byu-aug-2026-present'
-                                >
-                                    Life Sciences IT (BYU)
-                                </div>
-                            </li>
-                        
-                            
-                            
-                                
-                            
-                            <li class="nav-item px-1 bg-transparent" role="presentation">
-                                <div
-                                    class="nav-link  bg-transparent"
-                                    aria-selected="true"
-                                    role="tab"
-                                    data-bs-toggle="pill"
-                                    id='homelab-infrastructure-iac-ongoing-tab'
-                                    data-bs-target='#pills-homelab-infrastructure-iac-ongoing'
-                                    aria-controls='homelab-infrastructure-iac-ongoing'
-                                >
-                                    Homelab Infrastructure (IaC)
-                                </div>
-                            </li>
-                        
-                            
-                            
-                                
-                            
-                            <li class="nav-item px-1 bg-transparent" role="presentation">
-                                <div
-                                    class="nav-link  bg-transparent"
-                                    aria-selected="true"
-                                    role="tab"
-                                    data-bs-toggle="pill"
-                                    id='volunteer-production-sep-2022-oct-2024-tab'
-                                    data-bs-target='#pills-volunteer-production-sep-2022-oct-2024'
-                                    aria-controls='volunteer-production-sep-2022-oct-2024'
-                                >
-                                    Volunteer &amp; Production
-                                </div>
-                            </li>
-                        
-                    </ul>
-
-                    <div class="tab-content pb-3 bg-transparent primary-font" id="pills-tabContent">
-                        
-                            
-                            
-                            
-                            
-                                
-                            
-                            <div
-                                class="tab-pane fade bg-transparent show active"
-                                role="tabpanel"
-                                id='pills-life-sciences-it-byu-aug-2026-present'
-                                aria-labelledby='life-sciences-it-byu-aug-2026-present-tab'
-                            >
-                                
-                                    <div>
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <div>
-                                                <span class="h4">Endpoint Engineering and Security Manager</span>
-                                                
-                                                
-                                                    <span class="p-2">
-                                                        <span
-                                                            data-bs-toggle="tooltip"
-                                                            data-bs-placement="top"
-                                                            data-bs-original-title=Leading&#32;endpoint&#32;security,&#32;vulnerability&#32;remediation&#32;across&#32;1,200&#43;&#32;systems,&#32;and&#32;managing&#32;8&#32;student&#32;technicians
-                                                        > 
-                                                            <i class="fas fa-info-circle fa-xs"></i>
-                                                        </span>
-                                                    </span>
-                                                
-                                                
-                                                
-                                                    <small>-</small>
-                                                    <a href="https://www.byu.edu" target="_blank">Life Sciences IT (BYU)</a>
-                                                
-                                            </div>
-                                            <div class="d-block">
-                                                <small>Aug 2026 - Present</small>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="pb-2 pb-3">
-                                            <ul>
-<li>Directly manage and mentor a team of <strong>8 student technicians</strong>, taking ownership of operational documentation and standardizing engineering support procedures.</li>
-<li>Track, prioritize, and resolve security vulnerabilities across an enterprise environment of <strong>over 1,200 endpoints</strong>.</li>
-</ul>
-
-                                        </div>
-                                    </div>
-                                
-                                    <div>
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <div>
-                                                <span class="h5">IT Specialist</span>
-                                                
-                                                
-                                                    <span class="p-2">
-                                                        <span
-                                                            data-bs-toggle="tooltip"
-                                                            data-bs-placement="top"
-                                                            data-bs-original-title=Reduced&#32;endpoint&#32;vulnerability&#32;exposure&#32;by&#32;20%&#32;and&#32;boosted&#32;ticket&#32;closure&#32;rate&#32;by&#32;10%
-                                                        > 
-                                                            <i class="fas fa-info-circle fa-xs"></i>
-                                                        </span>
-                                                    </span>
-                                                
-                                                
-                                                
-                                            </div>
-                                            <div class="d-block">
-                                                <small>Aug 2025 - Aug 2026</small>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="pb-2 pb-3">
-                                            <ul>
-<li>Maintained security compliance for <strong>200+ network endpoints</strong>, successfully <strong>reducing organizational vulnerability exposure by 20%</strong>.</li>
-<li>Provided remote technical support and advanced troubleshooting for Windows and macOS systems, contributing to a <strong>10% increase in the team&rsquo;s average ticket closure rate</strong>.</li>
-</ul>
-
-                                        </div>
-                                    </div>
-                                
-                            </div>
-                        
-                        
-                            
-                            
-                            
-                            
-                                
-                            
-                            <div
-                                class="tab-pane fade bg-transparent "
-                                role="tabpanel"
-                                id='pills-homelab-infrastructure-iac-ongoing'
-                                aria-labelledby='homelab-infrastructure-iac-ongoing-tab'
-                            >
-                                
-                                    <div>
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <div>
-                                                <span class="h4">Security Infrastructure &amp; Kubernetes Architect (Personal Lab)</span>
-                                                
-                                                
-                                                    <span class="p-2">
-                                                        <span
-                                                            data-bs-toggle="tooltip"
-                                                            data-bs-placement="top"
-                                                            data-bs-original-title=Proxmox&#32;VE,&#32;3-Node&#32;K3s&#32;Cluster,&#32;Ansible&#32;Security&#32;Hardening,&#32;CrowdSec&#32;IPS,&#32;Longhorn&#32;&#43;&#32;Cloudflare&#32;R2
-                                                        > 
-                                                            <i class="fas fa-info-circle fa-xs"></i>
-                                                        </span>
-                                                    </span>
-                                                
-                                                
-                                                
-                                                    <small>-</small>
-                                                    <a href="/posts/homelab-infrastructure-iac/" target="_blank">Homelab Infrastructure (IaC)</a>
-                                                
-                                            </div>
-                                            <div class="d-block">
-                                                <small>Ongoing</small>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="pb-2 pb-3">
-                                            <ul>
-<li>Architected a <strong>Proxmox VE</strong> virtual server environment and a <strong>3-node K3s Kubernetes cluster</strong> (<code>i5-server</code>, <code>lenovo-server</code>, <code>pi-server</code>), migrating heavy VMs to lightweight <strong>LXC containers</strong> to <strong>reduce compute/memory consumption by over 50%</strong>.</li>
-<li>Engineered <strong>Ansible</strong> playbooks (<code>deploy_crowdsec_agents.yml</code>, <code>harden_all.yml</code>) to automate <strong>CrowdSec LAPI</strong> distributed intrusion prevention, default-deny <strong>UFW</strong> firewall rules, <strong>SSH <code>ed25519</code> lockdown</strong>, and <strong>Fail2Ban</strong> across Linux hosts.</li>
-<li>Deployed <strong>Longhorn</strong> distributed block storage with automated 2:00 AM daily offsite disaster-recovery backups to <strong>Cloudflare R2</strong>, plus <strong>Traefik ACME DNS-01 TLS</strong> and <strong>Cloudflare Tunnels</strong>.</li>
-<li>Developed a custom <strong>C++ daemon</strong> to poll Proxmox REST API health telemetry and route automated alerts to a <strong>Discord webhook</strong>.</li>
-</ul>
-
-                                        </div>
-                                    </div>
-                                
-                            </div>
-                        
-                        
-                            
-                            
-                            
-                            
-                                
-                            
-                            <div
-                                class="tab-pane fade bg-transparent "
-                                role="tabpanel"
-                                id='pills-volunteer-production-sep-2022-oct-2024'
-                                aria-labelledby='volunteer-production-sep-2022-oct-2024-tab'
-                            >
-                                
-                                    <div>
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <div>
-                                                <span class="h4">Full-Time Volunteer Representative (Papeete, Tahiti)</span>
-                                                
-                                                
-                                                
-                                                
-                                                    <small>-</small>
-                                                    <a href="https://www.churchofjesuschrist.org" target="_blank">Volunteer &amp; Production</a>
-                                                
-                                            </div>
-                                            <div class="d-block">
-                                                <small>Sep 2022 - Oct 2024</small>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="pb-2 pb-3">
-                                            <ul>
-<li>Served for two years in <strong>Papeete, Tahiti</strong>, developing cross-cultural leadership, French/Tahitian communication, and team training skills.</li>
-</ul>
-
-                                        </div>
-                                    </div>
-                                
-                                    <div>
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <div>
-                                                <span class="h5">Operator Level 1 — Bonnell (Clearfield, UT)</span>
-                                                
-                                                
-                                                
-                                                
-                                            </div>
-                                            <div class="d-block">
-                                                <small>May 2021 - Aug 2022</small>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="pb-2 pb-3">
-                                            <ul>
-<li>Maintained strict quality control and adherence to safety protocols in a high-demand industrial production environment.</li>
-</ul>
-
-                                        </div>
-                                    </div>
-                                
-                            </div>
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="education" class="py-5">
-    <div class="container">
-        <h3 class="text-center">Education &amp; Industry Certifications</h3>
-        <div class="row justify-content-center py-5">
-            
-            
-            <div class="col-12 p-0">
-                <div class="row row align-items-center justify-content-center m-1 mb-4">
-                    
-                    <div class="col-md-1 text-center me-2 p-0 d-none d-md-block">
-                        <div class="py-2">
-                            <span class="index shadow-lg">
-                                1
-                            </span>
-                        </div>
-                    </div>
-                    
-
-                    <div class="col-md-9">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="float-end">
-                                    <small>Sep 2025 - Apr 2028</small>
-                                </div>
-                                <h5 class="card-title">B.S. in Computer Engineering (Minor in Cybersecurity)</h5>
-                                
-                                
-                                <a href="https://www.byu.edu" target="_blank">
-                                    <h6>
-                                    Brigham Young University (Provo, UT)
-                                    </h6>
-                                </a>
-                                
-
-                                
-                                <div class="py-1">
-                                    GPA:
-                                    <i>
-                                        <small>3.88 / 4.00</small>
-                                    </i> 
-                                </div>
-                                
-                                <div class="py-1 education-content">
-                                    <p><strong>Relevant Coursework &amp; Focus Areas:</strong></p>
-<ul>
-<li><strong>EC EN 340 (Electronic Circuit Design 1):</strong> Op-Amp Active Filters, Virtual Ground Biasing, Power Decoupling, Diode/Transistor Circuits, and NGspice Simulation.</li>
-<li><strong>Cybersecurity &amp; Infrastructure Engineering:</strong> Vulnerability Management, Network Virtualization, Linux Hardening, Infrastructure as Code (Ansible/K3s), and Systems Administration.</li>
-<li><strong>BYU Aims Integration:</strong> Uniting <em>Intellectually Enlarging</em> engineering theory with practical hardware and security stewardship (<a href="https://aims.byu.edu/">aims.byu.edu</a>).</li>
-</ul>
-                                </div>
-
-                                
-                                <div class="py-1">
-                                    <a href="/portfolio-overview/" class="btn">
-                                        View EC EN 340 &amp; Homelab Portfolio Overview
-                                    </a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 p-0">
-                <div class="row row align-items-center justify-content-center m-1 mb-4">
-                    
-                    <div class="col-md-1 text-center me-2 p-0 d-none d-md-block">
-                        <div class="py-2">
-                            <span class="index shadow-lg">
-                                2
-                            </span>
-                        </div>
-                    </div>
-                    
-
-                    <div class="col-md-9">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="float-end">
-                                    <small>Certified</small>
-                                </div>
-                                <h5 class="card-title">CompTIA Security&#43;, Network&#43;, and A&#43; Certifications</h5>
-                                
-                                
-                                <a href="https://www.comptia.org" target="_blank">
-                                    <h6>
-                                    CompTIA Certified Professional
-                                    </h6>
-                                </a>
-                                
-
-                                
-                                <div class="py-1 education-content">
-                                    <p>Hold the full <strong>CompTIA Secure Infrastructure Specialist</strong> stack:</p>
-<ul>
-<li><strong>CompTIA Security+:</strong> Threat detection, zero-trust architecture, access control, secrets management, and vulnerability mitigation.</li>
-<li><strong>CompTIA Network+:</strong> TCP/IP, VLANs, DNS/DHCP, HTTP/HTTPS, SSL/TLS, VPNs (Tailscale/WireGuard), and OSI layer troubleshooting.</li>
-<li><strong>CompTIA A+:</strong> Enterprise Windows/Linux/macOS administration, hardware diagnostics, and endpoint fleet management.</li>
-</ul>
-                                </div>
-
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 p-0">
-                <div class="row row align-items-center justify-content-center m-1 mb-4">
-                    
-                    <div class="col-md-1 text-center me-2 p-0 d-none d-md-block">
-                        <div class="py-2">
-                            <span class="index shadow-lg">
-                                3
-                            </span>
-                        </div>
-                    </div>
-                    
-
-                    <div class="col-md-9">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="float-end">
-                                    <small>Aug 2019 - May 2023</small>
-                                </div>
-                                <h5 class="card-title">Associate of Science — General Studies</h5>
-                                
-                                
-                                <a href="https://www.weber.edu" target="_blank">
-                                    <h6>
-                                    Weber State University (Ogden, UT)
-                                    </h6>
-                                </a>
-                                
-
-                                
-                                <div class="py-1 education-content">
-                                    Completed foundational mathematics, sciences, and general education degree requirements prior to transferring to Brigham Young University&rsquo;s Computer Engineering program.
-                                </div>
-
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
-
-
 <section id="contact" class="py-5">
     <div class="container">
         <h3 class="text-center">Contact &amp; Connect</h3>

@@ -6,28 +6,28 @@
 <!-- fontawesome -->
 <script defer src="{{ (printf "%sfontawesome-6/all-6.4.2.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
 <style>
-  /* Custom enhancements for EC EN 340 Portfolio & Resume */
+  /* Clean, modern styling for Resume & EC EN 340 Portfolio */
   #about ul {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
-    gap: 6px 20px !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 8px 24px !important;
   }
-  .toc-card, .journey-card {
+  .journey-card {
     background-color: var(--secondary-color) !important;
     border-radius: 1rem;
-    box-shadow: 0px 8px 40px rgb(15 80 100 / 12%);
-    border: 1px solid rgba(100, 149, 237, 0.25);
+    box-shadow: 0px 8px 32px rgb(15 80 100 / 10%);
+    border: 1px solid rgba(100, 149, 237, 0.2);
   }
-  .toc-card a, .journey-card a {
+  .journey-card a {
     color: var(--text-link-color) !important;
     text-decoration: none;
   }
-  .toc-card a:hover, .journey-card a:hover {
+  .journey-card a:hover {
     text-decoration: underline;
   }
   .target-role-banner {
     border-left: 4px solid var(--primary-color);
     background-color: var(--secondary-color);
-    padding: 1rem 1.25rem;
+    padding: 0.9rem 1.25rem;
     border-radius: 0.5rem;
     margin-bottom: 1.25rem;
   }
@@ -45,18 +45,47 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
   #projects .card:hover .card-img-top {
-    transform: scale(1.04) !important;
+    transform: scale(1.03) !important;
   }
   .rubric-tag {
     display: inline-block;
     padding: 0.2rem 0.65rem;
     border-radius: 999px;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 600;
     background-color: var(--background-color);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
     margin-bottom: 0.5rem;
+  }
+  .toc-dropdown-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+  }
+  .toc-dropdown-bar .dropdown-menu {
+    min-width: 280px;
+    padding: 0.5rem 0;
+    background-color: var(--secondary-color);
+    border: 1px solid rgba(100, 149, 237, 0.3);
+  }
+  .toc-dropdown-bar .dropdown-item {
+    color: var(--text-color) !important;
+    padding: 0.45rem 1.25rem;
+    font-size: 0.92rem;
+  }
+  .toc-dropdown-bar .dropdown-item:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color) !important;
+  }
+  .toc-dropdown-bar .dropdown-header {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary-color);
+    font-weight: 700;
+    padding: 0.4rem 1.25rem 0.2rem;
   }
 </style>
 {{ end }}
@@ -69,11 +98,10 @@
 {{- partial "sections/hero/index.html" . -}}
 {{- partial "sections/toc-nav.html" . -}}
 {{- partial "sections/about.html" . -}}
-{{- partial "sections/projects.html" . -}}
-{{- partial "sections/revision-journey-aims.html" . -}}
-{{- partial "sections/homelab-showcase.html" . -}}
 {{- partial "sections/experience.html" . -}}
 {{- partial "sections/education.html" . -}}
-{{- partial "sections/achievements.html" . -}}
+{{- partial "sections/homelab-showcase.html" . -}}
+{{- partial "sections/projects.html" . -}}
+{{- partial "sections/revision-journey-aims.html" . -}}
 {{- partial "sections/contact.html" . -}}
 {{ end }}
