@@ -1,24 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Active Filters on Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio</title>
-		<link>http://localhost:1313/tags/active-filters/</link>
-		<description>Recent content in Active Filters on Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio</description>
-		<generator>Hugo</generator>
-		<language>en-us</language>
-		
-		
-		
-		
-			<lastBuildDate>Thu, 08 Oct 2026 00:00:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/active-filters/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Artifact 2: Dual Op-Amp Cascaded Bandpass Noise Filter (1.25 kHz – 3.67 kHz)</title>
-				<link>http://localhost:1313/posts/spice-simulation-lab/</link>
-				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/spice-simulation-lab/</guid>
-				<description>&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;&#xA;&lt;p&gt;This &lt;strong&gt;EC EN 340&lt;/strong&gt; design challenge required isolating an ultra-weak $1\text{pA}$ ($2000\text{Hz}$) optical signal (&lt;code&gt;Is&lt;/code&gt;) from severe multi-source interference using &lt;strong&gt;at most two operational amplifiers&lt;/strong&gt;. Specifically, the photodiode sensing node (&lt;code&gt;in&lt;/code&gt;) was simultaneously driven by:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A $1\text{mA}$ DC ambient light offset (&lt;code&gt;In1&lt;/code&gt;),&lt;/li&gt;&#xA;&lt;li&gt;A $400\text{nA}$ low-frequency interference source at $100\text{Hz}$ (&lt;code&gt;In2&lt;/code&gt;),&lt;/li&gt;&#xA;&lt;li&gt;A $400\text{nA}$ high-frequency interference source at $20\text{kHz}$ (&lt;code&gt;In3&lt;/code&gt;), and&lt;/li&gt;&#xA;&lt;li&gt;A $1481\text{Hz}$ power-supply ripple source (&lt;code&gt;V1&lt;/code&gt;).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Because the interfering currents were $400{,}000\times$ to $10^9\times$ larger than the $1\text{pA}$ target current, the circuit had to provide massive in-band amplification across the target &lt;strong&gt;$1250\text{Hz}$ to $3666\text{Hz}$&lt;/strong&gt; frequency window while aggressively rejecting all out-of-band frequencies.&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Active Filters on Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio</title><link>https://landon-wilmott.github.io/tags/active-filters/</link><description>Recent content in Active Filters on Landon Wilmott | Security Infrastructure &amp; Computer Engineering Portfolio</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 08 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://landon-wilmott.github.io/tags/active-filters/index.xml" rel="self" type="application/rss+xml"/><item><title>Artifact 2: Dual Op-Amp Cascaded Bandpass Noise Filter (1.25 kHz – 3.67 kHz)</title><link>https://landon-wilmott.github.io/posts/spice-simulation-lab/</link><pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate><guid>https://landon-wilmott.github.io/posts/spice-simulation-lab/</guid><description>&lt;h2 id="the-problem"&gt;The Problem&lt;/h2&gt;
+&lt;p&gt;This &lt;strong&gt;EC EN 340&lt;/strong&gt; design challenge required isolating an ultra-weak $1\text{pA}$ ($2000\text{Hz}$) optical signal (&lt;code&gt;Is&lt;/code&gt;) from severe multi-source interference using &lt;strong&gt;at most two operational amplifiers&lt;/strong&gt;. Specifically, the photodiode sensing node (&lt;code&gt;in&lt;/code&gt;) was simultaneously driven by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A $1\text{mA}$ DC ambient light offset (&lt;code&gt;In1&lt;/code&gt;),&lt;/li&gt;
+&lt;li&gt;A $400\text{nA}$ low-frequency interference source at $100\text{Hz}$ (&lt;code&gt;In2&lt;/code&gt;),&lt;/li&gt;
+&lt;li&gt;A $400\text{nA}$ high-frequency interference source at $20\text{kHz}$ (&lt;code&gt;In3&lt;/code&gt;), and&lt;/li&gt;
+&lt;li&gt;A $1481\text{Hz}$ power-supply ripple source (&lt;code&gt;V1&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Because the interfering currents were $400{,}000\times$ to $10^9\times$ larger than the $1\text{pA}$ target current, the circuit had to provide massive in-band amplification across the target &lt;strong&gt;$1250\text{Hz}$ to $3666\text{Hz}$&lt;/strong&gt; frequency window while aggressively rejecting all out-of-band frequencies.&lt;/p&gt;</description></item></channel></rss>

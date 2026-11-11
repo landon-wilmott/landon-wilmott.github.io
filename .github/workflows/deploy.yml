@@ -2,6 +2,8 @@ name: Deploy Hugo to Pages
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -21,21 +23,30 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
-      - name: Build with Hugo
+
+      - name: Strict Build with Hugo
         run: |
           rm -rf public
-          hugo --minify
+          hugo --minify --panicOnWarning --printPathWarnings
           rm -rf public/fontawesome-6/svgs
           touch public/.nojekyll
+
+      - name: Lint Config, Scan for Secrets & Verify Links
+        run: python3 scripts/verify_site.py
+
       - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+
       - name: Deploy to GitHub Pages
+        if: github.event_name != 'pull_request'
         id: deployment
         uses: actions/deploy-pages@v4
