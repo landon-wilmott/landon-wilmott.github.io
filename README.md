@@ -34,3 +34,7 @@ hugo --cleanDestinationDir --minify --panicOnWarning --printPathWarnings
 rm -rf public/fontawesome-6/svgs && touch public/.nojekyll
 python3 scripts/verify_site.py
 ```
+
+## Disclaimer
+The source code for this website is licensed under the MIT License. All website content, including text, resume details, and images, is Copyright © 2026 Landon Wilmott. All Rights Reserved.
+
