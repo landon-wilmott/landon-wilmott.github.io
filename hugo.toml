@@ -4,6 +4,9 @@ title = "Landon Wilmott | Security Infrastructure & Computer Engineering Portfol
 theme = "hugo-profile"
 enableRobotsTXT = true
 
+[params]
+  googleSiteVerification = "r1SqGzMbYH_vaCO-ls_hxqSfWCJ7SLDKWNMc9Dnx1yA"
+  
 [outputs]
   home = ["HTML", "RSS", "JSON"]
   page = ["HTML", "RSS"]
