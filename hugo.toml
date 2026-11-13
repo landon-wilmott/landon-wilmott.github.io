@@ -3,9 +3,6 @@ locale = "en-us"
 title = "Landon Wilmott | Security Infrastructure & Computer Engineering Portfolio"
 theme = "hugo-profile"
 enableRobotsTXT = true
-
-[params]
-  googleSiteVerification = "r1SqGzMbYH_vaCO-ls_hxqSfWCJ7SLDKWNMc9Dnx1yA"
   
 [outputs]
   home = ["HTML", "RSS", "JSON"]
@@ -110,6 +107,7 @@ enableRobotsTXT = true
 [params]
   title = "Landon Wilmott"
   description = "Security Infrastructure Engineer & BYU Computer Engineering Portfolio (GPA 3.88) for Landon Wilmott, featuring Ansible/Proxmox/K3s Infrastructure-as-Code, EC EN 340 circuit design artifacts, and BYU Aims alignment."
+  googleSiteVerification = "r1SqGzMbYH_vaCO-ls_hxqSfWCJ7SLDKWNMc9Dnx1yA"
   favicon = "/fav.png"
   useBootstrapCDN = false
   mathjax = true
